@@ -74,8 +74,8 @@ export default function AboutPage() {
             >
               <div className="aspect-[4/3] bg-slate-100 overflow-hidden border border-slate-200">
                 <img
-                  src="https://fpimages.withfloats.com/actual/68e49dda3902000b6a846742.png"
-                  alt="Angel Cables Manufacturing"
+                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=85&w=1200&auto=format&fit=crop"
+                  alt="Angel Cables Manufacturing Facility"
                   className="w-full h-full object-cover"
                 />
               </div>
