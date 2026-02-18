@@ -124,7 +124,7 @@ export default function ContactPage() {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/919873816127?text=Hi%2C%20I%20am%20interested%20in%20Angel%20Cables%20products.%20Please%20share%20details."
+              href="https://api.whatsapp.com/send?phone=919873816127&text=Hi%2C%20I%20am%20interested%20in%20Angel%20Cables%20products.%20Please%20share%20details."
               target="_blank"
               rel="noopener noreferrer"
               data-testid="contact-whatsapp-btn"
