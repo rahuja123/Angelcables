@@ -304,7 +304,7 @@ export default function ProductsPage() {
                 {/* CTA */}
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
-                    href={`https://wa.me/919873816127?text=Hi%2C%20I%20am%20interested%20in%20${encodeURIComponent(selectedProduct.name)}.%20Please%20share%20pricing%20and%20availability.`}
+                    href={`https://api.whatsapp.com/send?phone=919873816127&text=Hi%2C%20I%20am%20interested%20in%20${encodeURIComponent(selectedProduct.name)}.%20Please%20share%20pricing%20and%20availability.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     data-testid="modal-whatsapp-enquiry"
