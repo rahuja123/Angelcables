@@ -1,0 +1,126 @@
+{
+  "brand_identity": {
+    "name": "Angel Cables",
+    "parent_company": "R K Enterprises",
+    "tagline": "Powering India with Precision & Safety",
+    "emotional_tone": "Industrial Authority, Engineering Precision, Uncompromising Safety",
+    "visual_archetype": "The Performance Pro (Industrial Swiss)",
+    "description": "A high-end industrial wire and cable manufacturer. The design must feel like a precision tool—clean, sharp, and engineered.",
+    "logos": {
+        "primary": "https://fplogoimages.withfloats.com/actual/68e49dcdc5794dccda71a861.png"
+    }
+  },
+  "typography": {
+    "primary_font": "Chivo",
+    "secondary_font": "Manrope",
+    "mono_font": "JetBrains Mono",
+    "scale": {
+      "h1": "text-6xl md:text-7xl font-black tracking-tight leading-[0.9]",
+      "h2": "text-4xl md:text-5xl font-bold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-bold tracking-tight",
+      "body": "text-base md:text-lg text-muted-foreground leading-relaxed",
+      "label": "text-xs font-mono uppercase tracking-widest text-muted-foreground"
+    },
+    "rules": "Do not center headings by default. Use 'Chivo' for all headings. Use 'Manrope' for body text. Use 'JetBrains Mono' for technical specs (voltage, diameter)."
+  },
+  "colors": {
+    "palette": {
+      "primary": "#0F172A",
+      "secondary": "#EA580C",
+      "accent": "#F59E0B",
+      "background": "#FFFFFF",
+      "surface": "#F8FAFC",
+      "border": "#E2E8F0"
+    },
+    "usage": {
+      "primary": "Text, Strong Borders, Footer Background",
+      "secondary": "Call to Actions, Highlights (Industrial Orange)",
+      "accent": "Safety signals, 'New' badges (Amber)",
+      "background": "Main page background",
+      "surface": "Card backgrounds, Section alternates"
+    },
+    "gradients": "No CSS gradients. Use mesh gradients or subtle noise overlays only."
+  },
+  "layout_strategy": {
+    "grid_system": "The Bento Grid (Mode A)",
+    "spacing": "Generous. Use p-8 to p-24. Containers must breathe.",
+    "container_width": "max-w-7xl mx-auto px-4 md:px-8",
+    "rules": [
+      "No center-aligned hero sections.",
+      "Use asymmetry in product grids.",
+      "Sticky navigation with glassmorphism.",
+      "Footer must be massive (min-height 400px) and dark."
+    ]
+  },
+  "visual_enhancers": {
+    "texture": "Add a subtle noise overlay (opacity 0.03) to the entire body to kill digital flatness.",
+    "shadows": "Hard shadows for buttons (shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]). Soft ambient shadows for cards.",
+    "borders": "Thin, crisp borders (1px) in standard state. Thicker borders (2px) on hover.",
+    "glassmorphism": "Use for the navigation bar: bg-white/80 backdrop-blur-md border-b border-black/5."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-orange-600 text-white hover:bg-orange-700 rounded-none px-8 py-4 font-bold uppercase tracking-wide transition-all active:scale-95",
+      "secondary": "border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white rounded-none px-8 py-4 font-bold uppercase tracking-wide"
+    },
+    "cards": {
+      "product": "bg-white border border-slate-200 p-0 hover:border-orange-500 transition-colors group overflow-hidden relative",
+      "feature": "bg-slate-50 p-8 border border-transparent hover:border-slate-200 hover:bg-white transition-all"
+    },
+    "badges": "bg-slate-100 text-slate-900 px-3 py-1 text-xs font-mono uppercase tracking-wider border border-slate-200"
+  },
+  "images": {
+    "hero_bg": "https://images.unsplash.com/photo-1731311982480-19fd86a1e4e2?q=85&w=1920&auto=format&fit=crop",
+    "about_cover": "https://fpimages.withfloats.com/actual/68e49dda3902000b6a846742.png",
+    "products": {
+      "submersible": "https://fplogoimages.withfloats.com/actual/68e49dcdc5794dccda71a861.png",
+      "house_wire": "https://productimages.withfloats.com/actual/68e4a12956522870096e857a.png",
+      "multi_strand": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+      "armoured": "https://images.unsplash.com/photo-1580810734898-5e1753f23337?q=85&w=800&auto=format&fit=crop",
+      "flexible": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg"
+    },
+    "gallery": [
+      "https://fpimages.withfloats.com/actual/68e60002327a323aaf2eb218.png",
+      "https://fpimages.withfloats.com/actual/68b915ab3266bc661dcc5cf9.jpg"
+    ]
+  },
+  "motion": {
+    "library": "framer-motion",
+    "defaults": {
+      "duration": 0.4,
+      "ease": "easeOut"
+    },
+    "scroll": "Use Lenis for smooth scrolling (MANDATORY).",
+    "micro_interactions": "Buttons should have a magnetic feel or strict hard-press effect."
+  },
+  "pages": {
+    "home": {
+      "sections": ["Hero (Impact)", "Trust Marquee (Clients/Stats)", "Featured Products (Bento Grid)", "Why Choose Angel (Grid)", "CTA (Contact)"]
+    },
+    "products": {
+      "layout": "Sidebar filter (Categories) + Grid (Products)",
+      "categories": ["Armoured Cable", "Flexible Cable", "Electric House Wire", "CCTV Cables", "Copper Wire", "Submersible Cable"]
+    },
+    "about": {
+      "narrative": "Legacy of Trust (Since 2005)",
+      "visuals": "Factory shots, Team photos, Timeline"
+    },
+    "contact": {
+      "info": {
+        "address": "B-70/32, DSIDC, Lawrence Road Industrial Area, Delhi-110035",
+        "phone": "+91 9873816127",
+        "email": "rkenterprises.ahuja@gmail.com"
+      },
+      "elements": ["Google Map (Grayscale)", "Contact Form (Shadcn)", "Floating WhatsApp"]
+    }
+  },
+  "universal_guidelines": [
+    "Do not use gradients for backgrounds. Use solid colors or noise textures.",
+    "Typography must be BIG. If you think it's big enough, make it bigger.",
+    "Use 'data-testid' on all interactive elements.",
+    "Images must have 'alt' tags for SEO.",
+    "Mobile first: Ensure all grids collapse to 1 column on mobile.",
+    "Ensure high contrast for text (APCA standards)."
+  ],
+  "instructions_to_main_agent": "You are building the Angel Cables website. Use the extracted image URLs provided. If a specific product image fails to load, fallback to the 'armoured' or generic wire image. The design should feel 'Heavy' and 'Reliable' - think Caterpillar or DeWalt but for cables. Use the 'Orange' accent sparingly but effectively."
+}
