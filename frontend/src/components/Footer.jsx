@@ -36,7 +36,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-6" data-testid="footer-logo">
-              <img src={LOGO} alt="Angel Cables" className="h-10 w-auto block" />
+              <div className="h-10 w-[88px] overflow-hidden shrink-0">
+                <img src={LOGO} alt="Angel Cables" className="h-[44px] w-[96px] -mt-[2px] -ml-[4px] block object-cover" />
+              </div>
               <div>
                 <span className="text-xl font-black tracking-tight block" style={{ fontFamily: 'Chivo' }}>ANGEL CABLES</span>
                 <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-400">Since 2005</span>
