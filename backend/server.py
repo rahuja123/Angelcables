@@ -415,14 +415,16 @@ PRODUCTS_DATA = [
 
 async def seed_products():
     count = await db.products.count_documents({})
-    if count == 0:
+    # Re-seed if count doesn't match PRODUCTS_DATA (catches schema updates and new products)
+    if count != len(PRODUCTS_DATA):
+        await db.products.delete_many({})
         for p in PRODUCTS_DATA:
             product = Product(**p)
             doc = product.model_dump()
             await db.products.insert_one(doc)
-        logging.info(f"Seeded {len(PRODUCTS_DATA)} products")
+        logging.info(f"Re-seeded products: {count} -> {len(PRODUCTS_DATA)}")
     else:
-        logging.info(f"Products already seeded: {count}")
+        logging.info(f"Products up to date: {count} products")
 
 @app.on_event("startup")
 async def startup():
