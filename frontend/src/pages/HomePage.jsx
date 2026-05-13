@@ -44,6 +44,8 @@ const categoryImages = {
   "CCTV Cables": "https://productimages.withfloats.com/actual/68e49f18993a511b693b1be0.png",
   "Copper Wire": "https://productimages.withfloats.com/actual/68e49a12b575d00c5aa771b6.jpg",
   "Submersible Cable": "https://fpimages.withfloats.com/actual/68e60002327a323aaf2eb218.png",
+  "CAT6 & LAN Cables": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+  "Telephone & Communication Cable": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
 };
 
 const testimonials = [
