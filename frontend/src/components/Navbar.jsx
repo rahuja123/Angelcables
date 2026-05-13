@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const LOGO = "https://fplogoimages.withfloats.com/actual/68e49dcdc5794dccda71a861.png";
@@ -12,10 +12,18 @@ const navLinks = [
   { label: "Contact", path: "/contact" },
 ];
 
+const resourceLinks = [
+  { label: "Become a Dealer", path: "/dealers" },
+  { label: "FAQ", path: "/faq" },
+  { label: "Product Catalog", path: "/catalog" },
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
   const location = useLocation();
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -25,7 +33,20 @@ export default function Navbar() {
 
   useEffect(() => {
     setMobileOpen(false);
+    setResourcesOpen(false);
   }, [location]);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setResourcesOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const isResourceActive = resourceLinks.some((l) => l.path === location.pathname);
 
   return (
     <>
@@ -86,6 +107,48 @@ export default function Navbar() {
                   )}
                 </Link>
               ))}
+
+              {/* Resources dropdown */}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setResourcesOpen(!resourcesOpen)}
+                  data-testid="nav-resources-btn"
+                  className={`px-4 py-2 text-sm font-semibold uppercase tracking-wider transition-colors flex items-center gap-1 ${
+                    isResourceActive ? "text-[#EA580C]" : "text-slate-600 hover:text-[#0F172A]"
+                  }`}
+                >
+                  More
+                  <ChevronDown size={14} className={`transition-transform duration-200 ${resourcesOpen ? "rotate-180" : ""}`} />
+                </button>
+                <AnimatePresence>
+                  {resourcesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 6 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute right-0 top-full mt-1 w-52 bg-white border border-slate-200 shadow-lg z-50"
+                      data-testid="resources-dropdown"
+                    >
+                      {resourceLinks.map((link) => (
+                        <Link
+                          key={link.path}
+                          to={link.path}
+                          data-testid={`nav-${link.label.toLowerCase().replace(/\s/g, '-')}`}
+                          className={`block px-5 py-3 text-sm font-semibold transition-colors border-b border-slate-100 last:border-b-0 ${
+                            location.pathname === link.path
+                              ? "text-[#EA580C] bg-orange-50"
+                              : "text-slate-600 hover:text-[#EA580C] hover:bg-slate-50"
+                          }`}
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
               <Link
                 to="/contact"
                 data-testid="nav-get-quote-btn"
@@ -118,7 +181,7 @@ export default function Navbar() {
               data-testid="mobile-menu"
             >
               <div className="px-4 py-4 space-y-1">
-                {navLinks.map((link) => (
+                {[...navLinks, ...resourceLinks].map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}

@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, X, ChevronRight, Filter } from "lucide-react";
+import { Search, X, ChevronRight, Filter, Download } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import axios from "axios";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -11,18 +12,39 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
+function ProductSkeleton() {
+  return (
+    <div className="bg-white border border-slate-200 overflow-hidden animate-pulse">
+      <div className="aspect-[4/3] bg-slate-200" />
+      <div className="p-5 space-y-3">
+        <div className="h-4 bg-slate-200 rounded w-3/4" />
+        <div className="h-3 bg-slate-200 rounded w-full" />
+        <div className="h-3 bg-slate-200 rounded w-2/3" />
+      </div>
+    </div>
+  );
+}
+
 export default function ProductsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState(searchParams.get("category") || "All");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
   useEffect(() => {
-    axios.get(`${API}/products`).then((r) => setProducts(r.data)).catch(console.error);
-    axios.get(`${API}/products/categories`).then((r) => setCategories(r.data)).catch(console.error);
+    setLoading(true);
+    Promise.all([
+      axios.get(`${API}/products`),
+      axios.get(`${API}/products/categories`),
+    ]).then(([prodRes, catRes]) => {
+      setProducts(prodRes.data);
+      setCategories(catRes.data);
+      setLoading(false);
+    }).catch(() => setLoading(false));
   }, []);
 
   useEffect(() => {
@@ -49,16 +71,33 @@ export default function ProductsPage() {
 
   return (
     <div>
+      <Helmet>
+        <title>Products — Electrical Wires & Cables | Angel Cables</title>
+        <meta name="description" content="Browse Angel Cables' full range of ISI-marked electrical wires, house wiring cables, armoured cables and industrial cables. Filter by category and download the product catalog." />
+        <link rel="canonical" href="https://angelcables.com/products" />
+        <meta property="og:title" content="Products — Electrical Wires & Cables | Angel Cables" />
+        <meta property="og:description" content="Full product range from Angel Cables — house wiring, armoured, industrial and specialty cables manufactured in Delhi." />
+        <meta property="og:url" content="https://angelcables.com/products" />
+      </Helmet>
       {/* Page Header */}
       <div className="bg-[#0F172A] py-12 md:py-16" data-testid="products-header">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <span className="text-xs font-mono uppercase tracking-[0.3em] text-[#EA580C]">Our Range</span>
-          <h1 className="text-3xl md:text-5xl font-black text-white mt-2 tracking-tight" style={{ fontFamily: "Chivo" }} data-testid="products-page-heading">
-            Products
-          </h1>
-          <p className="text-slate-400 mt-3 max-w-xl text-sm md:text-base">
-            Browse our complete range of wires and cables — from armoured cables for underground installations to flexible cables for everyday use.
-          </p>
+        <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <span className="text-xs font-mono uppercase tracking-[0.3em] text-[#EA580C]">Our Range</span>
+            <h1 className="text-3xl md:text-5xl font-black text-white mt-2 tracking-tight" style={{ fontFamily: "Chivo" }} data-testid="products-page-heading">
+              Products
+            </h1>
+            <p className="text-slate-400 mt-3 max-w-xl text-sm md:text-base">
+              Browse our complete range of wires and cables — from armoured cables for underground installations to flexible cables for everyday use.
+            </p>
+          </div>
+          <a
+            href={`${process.env.REACT_APP_BACKEND_URL}/api/catalog/pdf`}
+            download="angel-cables-catalog-2025.pdf"
+            className="shrink-0 flex items-center gap-2 border border-slate-600 text-slate-300 px-5 py-2.5 text-sm font-bold hover:bg-slate-800 transition-colors uppercase tracking-wide"
+          >
+            <Download size={15} /> Download Catalog
+          </a>
         </div>
       </div>
 
@@ -172,7 +211,11 @@ export default function ProductsPage() {
               </p>
             </div>
 
-            {filtered.length === 0 ? (
+            {loading ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {Array.from({ length: 6 }).map((_, i) => <ProductSkeleton key={i} />)}
+              </div>
+            ) : filtered.length === 0 ? (
               <div className="py-20 text-center" data-testid="no-products">
                 <p className="text-slate-400 text-lg">No products found</p>
                 <button
@@ -193,36 +236,39 @@ export default function ProductsPage() {
                       initial="hidden"
                       animate="visible"
                       exit="hidden"
-                      className="bg-white border border-slate-200 overflow-hidden hover:border-[#EA580C] transition-colors group cursor-pointer"
-                      onClick={() => setSelectedProduct(product)}
                       data-testid={`product-card-${product.id}`}
                     >
-                      <div className="aspect-[4/3] bg-slate-50 overflow-hidden relative">
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-slate-700 px-3 py-1 text-[10px] font-mono uppercase tracking-wider border border-slate-200">
-                          {product.category}
-                        </span>
-                      </div>
-                      <div className="p-5">
-                        <h3 className="font-bold text-[#0F172A] text-sm" style={{ fontFamily: "Chivo" }}>
-                          {product.name}
-                        </h3>
-                        <p className="text-slate-500 text-xs mt-2 line-clamp-2">{product.description}</p>
-                        <div className="mt-4 flex items-center justify-between">
-                          <div className="flex flex-wrap gap-1">
-                            {product.features.slice(0, 2).map((f) => (
-                              <span key={f} className="text-[9px] font-mono uppercase tracking-wider text-slate-500 bg-slate-50 px-2 py-0.5 border border-slate-100">
-                                {f}
-                              </span>
-                            ))}
-                          </div>
-                          <ChevronRight size={14} className="text-slate-400 group-hover:text-[#EA580C] transition-colors" />
+                      <Link
+                        to={`/products/${product.id}`}
+                        className="bg-white border border-slate-200 overflow-hidden hover:border-[#EA580C] transition-colors group block"
+                      >
+                        <div className="aspect-[4/3] bg-slate-50 overflow-hidden relative">
+                          <img
+                            src={product.image}
+                            alt={product.name}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-slate-700 px-3 py-1 text-[10px] font-mono uppercase tracking-wider border border-slate-200">
+                            {product.category}
+                          </span>
                         </div>
-                      </div>
+                        <div className="p-5">
+                          <h3 className="font-bold text-[#0F172A] text-sm" style={{ fontFamily: "Chivo" }}>
+                            {product.name}
+                          </h3>
+                          <p className="text-slate-500 text-xs mt-2 line-clamp-2">{product.description}</p>
+                          <div className="mt-4 flex items-center justify-between">
+                            <div className="flex flex-wrap gap-1">
+                              {product.features.slice(0, 2).map((f) => (
+                                <span key={f} className="text-[9px] font-mono uppercase tracking-wider text-slate-500 bg-slate-50 px-2 py-0.5 border border-slate-100">
+                                  {f}
+                                </span>
+                              ))}
+                            </div>
+                            <ChevronRight size={14} className="text-slate-400 group-hover:text-[#EA580C] transition-colors" />
+                          </div>
+                        </div>
+                      </Link>
                     </motion.div>
                   ))}
                 </AnimatePresence>

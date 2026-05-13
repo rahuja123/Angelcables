@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Zap, Award, Factory, ChevronRight } from "lucide-react";
+import { ArrowRight, Shield, Zap, Award, Factory, ChevronRight, Quote } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import axios from "axios";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -45,6 +46,33 @@ const categoryImages = {
   "Submersible Cable": "https://fpimages.withfloats.com/actual/68e60002327a323aaf2eb218.png",
 };
 
+const testimonials = [
+  {
+    quote: "Angel Cables has been our go-to supplier for armoured cables for the past 6 years. Consistent quality, ISI certified, and always delivered on time.",
+    name: "Rakesh Sharma",
+    role: "Electrical Contractor",
+    company: "Sharma Electricals, Delhi",
+  },
+  {
+    quote: "We've used their house wires across 3 residential projects in Gurugram. Zero complaints from residents and the pricing beats the market.",
+    name: "Anand Verma",
+    role: "Project Manager",
+    company: "BuildRight Infrastructure",
+  },
+  {
+    quote: "Sourced submersible cables for 200+ borewells across Haryana. The quality is consistently good and their support team responds fast on WhatsApp.",
+    name: "Suresh Patel",
+    role: "Dealer & Distributor",
+    company: "Patel Hardware, Rohtak",
+  },
+  {
+    quote: "Good product range under one roof — armoured, flexible, CCTV cables. Makes procurement easy for large industrial orders.",
+    name: "Meena Agarwal",
+    role: "Purchase Manager",
+    company: "Northern Power Projects",
+  },
+];
+
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i = 0) => ({
@@ -67,6 +95,16 @@ export default function HomePage() {
 
   return (
     <div>
+      <Helmet>
+        <title>Angel Cables — Premium Wires & Cables Manufacturer in Delhi</title>
+        <meta name="description" content="Angel Cables manufactures high-quality electrical wires, house wiring cables, armoured cables and industrial cables in Delhi. ISI marked, trusted by contractors and dealers across India." />
+        <meta name="keywords" content="electrical cables manufacturer Delhi, wires manufacturer India, house wiring cable, armoured cable, industrial cable, ISI marked cables" />
+        <link rel="canonical" href="https://angelcables.com/" />
+        <meta property="og:title" content="Angel Cables — Premium Wires & Cables Manufacturer" />
+        <meta property="og:description" content="ISI-marked electrical wires and cables direct from factory. Trusted by thousands of contractors and dealers across India." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://angelcables.com/" />
+      </Helmet>
       {/* HERO */}
       <section className="relative bg-[#0F172A] overflow-hidden" data-testid="hero-section">
         {/* Geometric accent */}
@@ -331,6 +369,45 @@ export default function HomePage() {
                 <item.icon size={28} className="text-[#EA580C] mb-4" />
                 <h3 className="text-lg font-bold text-white" style={{ fontFamily: "Chivo" }}>{item.title}</h3>
                 <p className="text-slate-400 text-sm mt-2 leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="py-16 md:py-24 bg-[#F8FAFC]" data-testid="testimonials-section">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="mb-12">
+            <span className="text-xs font-mono uppercase tracking-[0.3em] text-[#EA580C]">What Clients Say</span>
+            <h2 className="text-3xl md:text-5xl font-black text-[#0F172A] mt-2 tracking-tight" style={{ fontFamily: "Chivo" }}>
+              Trusted by Contractors
+              <br />& Industries Alike
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {testimonials.map((t, i) => (
+              <motion.div
+                key={t.name}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="bg-white border border-slate-200 p-8 hover:border-[#EA580C] transition-colors"
+                data-testid={`testimonial-${i}`}
+              >
+                <Quote size={28} className="text-[#EA580C] mb-4 opacity-60" />
+                <p className="text-slate-600 leading-relaxed text-sm">"{t.quote}"</p>
+                <div className="mt-6 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#EA580C]/10 border border-[#EA580C]/20 flex items-center justify-center shrink-0">
+                    <span className="text-[#EA580C] font-black text-sm">{t.name[0]}</span>
+                  </div>
+                  <div>
+                    <div className="font-bold text-[#0F172A] text-sm" style={{ fontFamily: "Chivo" }}>{t.name}</div>
+                    <div className="text-xs text-slate-400 font-mono">{t.role} · {t.company}</div>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>

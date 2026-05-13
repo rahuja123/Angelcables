@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import axios from "axios";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -69,6 +70,14 @@ export default function ContactPage() {
 
   return (
     <div>
+      <Helmet>
+        <title>Contact Us — Angel Cables | Get a Quote</title>
+        <meta name="description" content="Contact Angel Cables for product enquiries, bulk pricing, or dealer information. Call +91 9873816127 or send us a message. Based in Delhi, serving pan-India." />
+        <link rel="canonical" href="https://angelcables.com/contact" />
+        <meta property="og:title" content="Contact Angel Cables — Get a Quote Today" />
+        <meta property="og:description" content="Reach out to Angel Cables for bulk orders, dealer enquiries or product information. We respond within 24 hours." />
+        <meta property="og:url" content="https://angelcables.com/contact" />
+      </Helmet>
       {/* Header */}
       <div className="bg-[#0F172A] py-12 md:py-16" data-testid="contact-header">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
