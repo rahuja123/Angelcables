@@ -72,9 +72,9 @@ export default function ProductsPage() {
   return (
     <div>
       <Helmet>
-        <title>Buy Electrical Wires & Cables in Delhi | Armoured, House Wire, CCTV, Submersible | Angel Cables</title>
-        <meta name="description" content="Buy ISI-certified electrical wires & cables direct from manufacturer in Delhi. Armoured cable, electric house wire, flexible cable, CCTV cable, submersible cable & copper wire. Bulk pricing available. Angel Cables — R K Enterprises." />
-        <meta name="keywords" content="buy armoured cable Delhi, house wire price Delhi, flexible cable supplier, CCTV cable Delhi, submersible cable Delhi, copper wire Delhi, electrical cable wholesale, ISI wire manufacturer" />
+        <title>Buy Electrical Wires & Cables in Delhi | Armoured, House Wire, CCTV, CAT6, Submersible | Angel Cables</title>
+        <meta name="description" content="Buy ISI-certified electrical wires & cables direct from manufacturer in Delhi. Armoured cable, FR/FRLS house wire, CCTV coaxial, CAT6 LAN cable, submersible cable, telephone cable & copper wire. Bulk pricing available. Angel Cables — R K Enterprises." />
+        <meta name="keywords" content="buy armoured cable Delhi, FR FRLS house wire Delhi, flexible cable supplier, CCTV RG6 cable Delhi, submersible cable Delhi, CAT6 LAN cable Delhi, telephone cable EPABX, copper wire Delhi, electrical cable wholesale, ISI wire manufacturer" />
         <link rel="canonical" href="https://angelcables.com/products" />
         <meta property="og:title" content="Buy Electrical Wires & Cables in Delhi | Angel Cables" />
         <meta property="og:description" content="ISI-certified armoured cable, house wire, flexible cable, CCTV cable & more — direct from manufacturer in Delhi. Bulk pricing available." />
