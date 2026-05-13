@@ -98,12 +98,25 @@ export default function FAQPage() {
   return (
     <div>
       <Helmet>
-        <title>FAQ — Angel Cables | Common Questions Answered</title>
-        <meta name="description" content="Answers to frequently asked questions about Angel Cables products, ordering, delivery, bulk pricing and dealership opportunities. Can't find your answer? Contact us." />
+        <title>FAQ — Angel Cables Delhi | Cable & Wire Questions Answered</title>
+        <meta name="description" content="Answers to frequently asked questions about Angel Cables products, ISI certification, ordering, delivery, bulk pricing and dealership. Cable manufacturer in Delhi since 2005." />
+        <meta name="keywords" content="cable FAQ Delhi, ISI certified cable questions, armoured cable FAQ, house wire questions, cable manufacturer FAQ India" />
         <link rel="canonical" href="https://angelcables.com/faq" />
-        <meta property="og:title" content="Frequently Asked Questions — Angel Cables" />
-        <meta property="og:description" content="Get quick answers about Angel Cables products, delivery, bulk orders and dealership programs." />
+        <meta property="og:title" content="FAQ — Angel Cables Delhi | Wire & Cable Questions" />
+        <meta property="og:description" content="Get quick answers about Angel Cables products, ISI certification, delivery, bulk orders and dealership programs." />
         <meta property="og:url" content="https://angelcables.com/faq" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqs.flatMap(cat => cat.items.map(item => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": item.a
+            }
+          })))
+        })}</script>
       </Helmet>
       {/* Header */}
       <div className="bg-[#0F172A] py-12 md:py-16">

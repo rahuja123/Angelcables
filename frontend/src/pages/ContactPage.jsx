@@ -18,14 +18,16 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 9873816127",
-    href: "tel:+919873816127",
+    phones: [
+      { value: "+91 9810011248", href: "tel:+919810011248" },
+      { value: "+91 9873816127", href: "tel:+919873816127" },
+    ],
   },
   {
     icon: Mail,
     label: "Email",
-    value: "rkenterprises.ahuja@gmail.com",
-    href: "mailto:rkenterprises.ahuja@gmail.com",
+    value: "info@angelcables.com",
+    href: "mailto:info@angelcables.com",
   },
   {
     icon: MapPin,
@@ -36,7 +38,7 @@ const contactInfo = [
   {
     icon: Clock,
     label: "Business Hours",
-    value: "Mon - Sat: 10:00 AM - 8:00 PM",
+    value: "Mon - Sun: 10:00 AM - 8:00 PM",
     href: null,
   },
 ];
@@ -71,12 +73,14 @@ export default function ContactPage() {
   return (
     <div>
       <Helmet>
-        <title>Contact Us — Angel Cables | Get a Quote</title>
-        <meta name="description" content="Contact Angel Cables for product enquiries, bulk pricing, or dealer information. Call +91 9873816127 or send us a message. Based in Delhi, serving pan-India." />
+        <title>Contact Angel Cables Delhi | Get Bulk Cable Quote | +91 9810011248</title>
+        <meta name="description" content="Contact Angel Cables (R K Enterprises) for bulk wire & cable orders, product enquiries or dealer pricing. Call +91 9810011248 or visit us at B-70/32, DSIDC, Lawrence Road Industrial Area, Delhi-110035. We respond within 24 hours." />
+        <meta name="keywords" content="contact cable manufacturer Delhi, cable supplier contact Delhi, bulk cable order Delhi, Angel Cables phone, R K Enterprises contact" />
         <link rel="canonical" href="https://angelcables.com/contact" />
-        <meta property="og:title" content="Contact Angel Cables — Get a Quote Today" />
-        <meta property="og:description" content="Reach out to Angel Cables for bulk orders, dealer enquiries or product information. We respond within 24 hours." />
+        <meta property="og:title" content="Contact Angel Cables Delhi — Get a Bulk Quote" />
+        <meta property="og:description" content="Call +91 9810011248 or message Angel Cables for bulk wire & cable orders, dealer pricing and product enquiries. Based in Delhi." />
         <meta property="og:url" content="https://angelcables.com/contact" />
+        <meta property="og:image" content="https://angelcables.com/logo.png" />
       </Helmet>
       {/* Header */}
       <div className="bg-[#0F172A] py-12 md:py-16" data-testid="contact-header">
@@ -105,7 +109,7 @@ export default function ContactPage() {
             <div className="mt-8 space-y-6">
               {contactInfo.map((item, i) => (
                 <motion.div
-                  key={item.label}
+                  key={item.label + i}
                   custom={i}
                   initial="hidden"
                   whileInView="visible"
@@ -119,7 +123,16 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <span className="text-xs font-mono uppercase tracking-[0.15em] text-slate-400">{item.label}</span>
-                    {item.href ? (
+                    {item.phones ? (
+                      <p className="text-sm font-semibold text-[#0F172A] mt-0.5">
+                        {item.phones.map((p, idx) => (
+                          <span key={p.href}>
+                            <a href={p.href} className="hover:text-[#EA580C] transition-colors">{p.value}</a>
+                            {idx < item.phones.length - 1 && <span className="text-slate-300 mx-2">|</span>}
+                          </span>
+                        ))}
+                      </p>
+                    ) : item.href ? (
                       <a href={item.href} target={item.label === "Address" ? "_blank" : undefined} rel="noopener noreferrer" className="block text-sm font-semibold text-[#0F172A] mt-0.5 hover:text-[#EA580C] transition-colors">
                         {item.value}
                       </a>

@@ -6,7 +6,7 @@ import axios from "axios";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
-const LOGO = "https://fplogoimages.withfloats.com/actual/68e49dcdc5794dccda71a861.png";
+const LOGO = "/logo.png";
 
 export default function CatalogPage() {
   const [products, setProducts] = useState([]);

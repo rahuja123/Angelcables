@@ -10,6 +10,8 @@ import ContactPage from "@/pages/ContactPage";
 import CatalogPage from "@/pages/CatalogPage";
 import DealersPage from "@/pages/DealersPage";
 import FAQPage from "@/pages/FAQPage";
+import BlogPage from "@/pages/BlogPage";
+import BlogPostPage from "@/pages/BlogPostPage";
 import NotFoundPage from "@/pages/NotFoundPage";
 import AdminPage from "@/pages/AdminPage";
 import { HelmetProvider } from "react-helmet-async";
@@ -32,6 +34,8 @@ function App() {
               <Route path="/catalog" element={<CatalogPage />} />
               <Route path="/dealers" element={<DealersPage />} />
               <Route path="/faq" element={<FAQPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/:slug" element={<BlogPostPage />} />
               <Route path="/admin" element={<AdminPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>

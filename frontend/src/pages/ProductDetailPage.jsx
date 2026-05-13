@@ -66,13 +66,49 @@ export default function ProductDetailPage() {
   return (
     <div>
       <Helmet>
-        <title>{product ? `${product.name} — Angel Cables` : "Product — Angel Cables"}</title>
-        <meta name="description" content={product ? `${product.name} by Angel Cables. ${product.description?.slice(0, 120) || "ISI-marked quality wire and cable manufactured in Delhi."}` : "Product details — Angel Cables"} />
+        <title>{product ? `${product.name} in Delhi | Angel Cables` : "Product — Angel Cables"}</title>
+        <meta name="description" content={product ? `Buy ${product.name} from Angel Cables, Delhi manufacturer. ${product.description?.slice(0, 110) || "ISI-certified quality cable manufactured in Delhi."} Bulk orders & dealer pricing available. Call +91 9810011248.` : "Product details — Angel Cables"} />
+        {product && <meta name="keywords" content={`${product.name}, ${product.category} Delhi, buy ${product.name} Delhi, ${product.category} manufacturer, Angel Cables, ISI certified cable`} />}
         {product && <link rel="canonical" href={`https://angelcables.com/products/${product.id}`} />}
-        {product && <meta property="og:title" content={`${product.name} — Angel Cables`} />}
-        {product && <meta property="og:description" content={product.description?.slice(0, 200) || "High-quality wire and cable from Angel Cables, Delhi."} />}
+        {product && <meta property="og:title" content={`${product.name} — Angel Cables Delhi`} />}
+        {product && <meta property="og:description" content={`Buy ${product.name} direct from manufacturer in Delhi. ${product.description?.slice(0, 150) || "ISI-certified cable from Angel Cables."}`} />}
         {product && <meta property="og:url" content={`https://angelcables.com/products/${product.id}`} />}
-        {product?.image_url && <meta property="og:image" content={product.image_url} />}
+        {product && <meta property="og:image" content={product.image || "https://angelcables.com/logo.png"} />}
+        {product && <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": product.name,
+          "description": product.description,
+          "image": product.image || "https://angelcables.com/logo.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "Angel Cables"
+          },
+          "manufacturer": {
+            "@type": "Organization",
+            "name": "Angel Cables — R K Enterprises",
+            "url": "https://angelcables.com"
+          },
+          "category": product.category,
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+              "@type": "Organization",
+              "name": "Angel Cables — R K Enterprises"
+            }
+          }
+        })}</script>}
+        {product && <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://angelcables.com"},
+            {"@type": "ListItem", "position": 2, "name": "Products", "item": "https://angelcables.com/products"},
+            {"@type": "ListItem", "position": 3, "name": product.name, "item": `https://angelcables.com/products/${product.id}`}
+          ]
+        })}</script>}
       </Helmet>
       {/* Breadcrumb */}
       <div className="bg-[#F8FAFC] border-b border-slate-200">

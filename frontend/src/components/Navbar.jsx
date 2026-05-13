@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const LOGO = "https://fplogoimages.withfloats.com/actual/68e49dcdc5794dccda71a861.png";
+const LOGO = "/logo.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -13,6 +13,7 @@ const navLinks = [
 ];
 
 const resourceLinks = [
+  { label: "Wiring Guides", path: "/blog" },
   { label: "Become a Dealer", path: "/dealers" },
   { label: "FAQ", path: "/faq" },
   { label: "Product Catalog", path: "/catalog" },
@@ -54,10 +55,17 @@ export default function Navbar() {
       <div className="bg-[#0F172A] text-white text-xs py-2 px-4 hidden md:block" data-testid="top-bar">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <span className="font-mono tracking-wider opacity-70">A Unit of R K Enterprises</span>
-          <a href="tel:+919873816127" className="flex items-center gap-2 hover:text-orange-400 transition-colors" data-testid="top-bar-phone">
-            <Phone size={12} />
-            <span>+91 9873816127</span>
-          </a>
+          <div className="flex items-center gap-4">
+            <a href="tel:+919810011248" className="flex items-center gap-2 hover:text-orange-400 transition-colors" data-testid="top-bar-phone-1">
+              <Phone size={12} />
+              <span>+91 9810011248</span>
+            </a>
+            <span className="opacity-30">|</span>
+            <a href="tel:+919873816127" className="flex items-center gap-2 hover:text-orange-400 transition-colors" data-testid="top-bar-phone-2">
+              <Phone size={12} />
+              <span>+91 9873816127</span>
+            </a>
+          </div>
         </div>
       </div>
 

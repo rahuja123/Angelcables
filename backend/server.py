@@ -139,101 +139,277 @@ class DealerForm(BaseModel):
     message: str = ""
 
 PRODUCTS_DATA = [
+    # ── ARMOURED CABLE ──────────────────────────────────────────────────────────
     {
-        "name": "Aluminium Armoured Cable",
+        "name": "2 Core Aluminium Armoured Cable",
         "category": "Armoured Cable",
-        "description": "High-quality aluminium armoured cables designed for underground and outdoor power distribution. Built to withstand harsh conditions with superior mechanical protection.",
-        "features": ["Corrosion resistant", "High tensile strength", "Weather proof", "ISI certified"],
+        "description": "ISI-certified 2-core aluminium armoured cable for underground power distribution and outdoor feeder lines. Steel wire armour provides excellent mechanical protection against rodents, impact and soil pressure. Available in sizes 1.5 sq mm to 300 sq mm.",
+        "features": ["ISI certified (IS 1554)", "Steel wire armour (SWA)", "PVC outer sheath", "Corrosion resistant", "Underground rated"],
         "image": "https://productimages.withfloats.com/actual/68e49c9aed06f3bbb445df55.jpg",
-        "specs": {"material": "Aluminium", "insulation": "PVC/XLPE", "voltage": "Up to 1.1 kV"}
+        "specs": {"conductor": "Aluminium", "cores": "2", "voltage": "1.1 kV", "sizes": "1.5–300 sq mm", "standard": "IS 1554 Part 1"}
     },
     {
-        "name": "3 Core Armoured Cable",
+        "name": "3.5 Core Aluminium Armoured Cable",
         "category": "Armoured Cable",
-        "description": "Three core armoured cables for three-phase power supply systems. Ideal for industrial installations and heavy-duty applications requiring reliable power transmission.",
-        "features": ["Three-phase compatible", "Steel wire armour", "Flame retardant", "Long service life"],
+        "description": "3.5-core aluminium armoured cable — the industry standard for 3-phase 4-wire distribution in industrial plants and sub-stations. The reduced neutral (0.5 core) meets IS 1554 requirements for unbalanced load systems. Available in sizes 16 sq mm to 300 sq mm.",
+        "features": ["ISI certified (IS 1554)", "3-phase 4-wire system", "Reduced neutral conductor", "Steel wire armour", "Low voltage distribution"],
         "image": "https://productimages.withfloats.com/actual/68e49bf05c295f6c8beebf4e.jpg",
-        "specs": {"cores": "3", "insulation": "PVC", "voltage": "Up to 1.1 kV"}
+        "specs": {"conductor": "Aluminium", "cores": "3.5", "voltage": "1.1 kV", "sizes": "16–300 sq mm", "standard": "IS 1554 Part 1"}
     },
     {
-        "name": "Copper Armoured Cable",
+        "name": "4 Core Aluminium Armoured Cable",
         "category": "Armoured Cable",
-        "description": "Premium copper armoured cables offering excellent conductivity with robust mechanical protection. Perfect for critical power infrastructure and industrial setups.",
-        "features": ["Superior conductivity", "Mechanical protection", "Fire resistant", "Durable construction"],
-        "image": "https://productimages.withfloats.com/actual/68e49a12b575d00c5aa771b6.jpg",
-        "specs": {"material": "Copper", "insulation": "PVC/XLPE", "voltage": "Up to 1.1 kV"}
-    },
-    {
-        "name": "4 Core Armoured Cable",
-        "category": "Armoured Cable",
-        "description": "Four core armoured cables designed for three-phase plus neutral power distribution. Heavy-duty construction for demanding industrial environments.",
-        "features": ["4-core design", "Underground rated", "Impact resistant", "Temperature stable"],
+        "description": "4-core aluminium armoured cable for 3-phase plus full neutral power distribution. Widely used in commercial buildings, factories and underground power networks. Sizes from 1.5 sq mm to 300 sq mm.",
+        "features": ["Full neutral conductor", "ISI certified", "SWA protection", "Flame retardant PVC", "Long service life"],
         "image": "https://productimages.withfloats.com/actual/68e4995b1a14f21bee4f1cc3.png",
-        "specs": {"cores": "4", "insulation": "PVC", "voltage": "Up to 1.1 kV"}
+        "specs": {"conductor": "Aluminium", "cores": "4", "voltage": "1.1 kV", "sizes": "1.5–300 sq mm", "standard": "IS 1554 Part 1"}
     },
     {
-        "name": "Multi Core Control Copper Flexible Cables",
-        "category": "Flexible Cable",
-        "description": "Multi-core control cables for instrumentation and control wiring in industrial and commercial buildings. Excellent flexibility for complex routing needs.",
-        "features": ["Fine finish", "Reliable performance", "High strength", "Multi-core design"],
-        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
-        "specs": {"material": "Copper", "type": "Flexible", "application": "Control wiring"}
+        "name": "2 Core Copper Armoured Cable",
+        "category": "Armoured Cable",
+        "description": "Premium 2-core copper armoured cable offering superior conductivity and mechanical protection. Preferred for critical power circuits, hospitals and data centres where copper conductivity is mandatory. Sizes 1.5 sq mm to 300 sq mm.",
+        "features": ["Copper conductor", "Superior conductivity", "ISI certified", "Steel wire armour", "Fire resistant insulation"],
+        "image": "https://productimages.withfloats.com/actual/68e49a12b575d00c5aa771b6.jpg",
+        "specs": {"conductor": "Copper", "cores": "2", "voltage": "1.1 kV", "sizes": "1.5–300 sq mm", "standard": "IS 1554 Part 1"}
     },
     {
-        "name": "Two Core Flexible Cable",
-        "category": "Flexible Cable",
-        "description": "High-quality two core flexible cables suitable for domestic and light commercial applications. Superior insulation with long service life.",
-        "features": ["Dimensional accuracy", "Optimum insulation", "Long lasting life", "Flexible design"],
+        "name": "4 Core Copper Armoured Cable",
+        "category": "Armoured Cable",
+        "description": "4-core copper armoured cable for the most demanding power distribution applications. Used in high-rise buildings, industrial plants and infrastructure projects where copper conductors are specified. Sizes 1.5 sq mm to 300 sq mm.",
+        "features": ["Copper conductor", "4-core design", "SWA armoured", "PVC/XLPE insulation", "High mechanical strength"],
+        "image": "https://productimages.withfloats.com/actual/68e49c9aed06f3bbb445df55.jpg",
+        "specs": {"conductor": "Copper", "cores": "4", "voltage": "1.1 kV", "sizes": "1.5–300 sq mm", "standard": "IS 1554 Part 1"}
+    },
+    # ── ELECTRIC HOUSE WIRE ─────────────────────────────────────────────────────
+    {
+        "name": "FR Single Core House Wire",
+        "category": "Electric House Wire",
+        "description": "ISI-marked FR (Flame Retardant) single-core copper house wire for standard residential and commercial wiring. Pure electrolytic copper conductor with FR-PVC insulation for enhanced fire safety. Available in 1.0, 1.5, 2.5, 4.0 and 6.0 sq mm.",
+        "features": ["ISI marked (IS 694)", "Pure copper conductor", "FR-PVC insulation", "Self-extinguishing", "Smooth surface finish"],
+        "image": "https://productimages.withfloats.com/actual/68e4a12956522870096e857a.png",
+        "specs": {"conductor": "Copper", "insulation": "FR-PVC", "voltage": "1.1 kV", "sizes": "1.0–6.0 sq mm", "standard": "IS 694"}
+    },
+    {
+        "name": "FRLS Single Core House Wire",
+        "category": "Electric House Wire",
+        "description": "ISI-marked FRLS (Flame Retardant Low Smoke) single-core copper house wire. Mandatory in commercial buildings, hospitals, malls and public spaces as per NBC norms. Produces minimal toxic smoke during fire. Sizes 1.0 to 6.0 sq mm.",
+        "features": ["ISI marked (IS 694)", "Low smoke emission", "Halogen-free option", "NBC compliant", "Superior fire safety"],
+        "image": "https://productimages.withfloats.com/actual/68e4a12956522870096e857a.png",
+        "specs": {"conductor": "Copper", "insulation": "FRLS-PVC", "voltage": "1.1 kV", "sizes": "1.0–6.0 sq mm", "standard": "IS 694"}
+    },
+    {
+        "name": "FR Multi-Strand Flexible House Wire",
+        "category": "Electric House Wire",
+        "description": "FR multi-strand flexible copper house wire for easy installation in conduit and surface wiring. The stranded construction makes it far easier to pull through conduit compared to solid wire, with no compromise on conductivity. Sizes 1.0 to 6.0 sq mm.",
+        "features": ["Multi-strand copper", "Easy conduit pulling", "FR-PVC insulation", "ISI certified", "Kink resistant"],
         "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
-        "specs": {"cores": "2", "type": "Flexible", "application": "Domestic & Commercial"}
+        "specs": {"conductor": "Stranded Copper", "insulation": "FR-PVC", "voltage": "1.1 kV", "sizes": "1.0–6.0 sq mm", "standard": "IS 694"}
+    },
+    {
+        "name": "FRLS Multi-Strand Flexible House Wire",
+        "category": "Electric House Wire",
+        "description": "FRLS multi-strand flexible copper house wire combining easy installation with superior fire safety. Low smoke, self-extinguishing and ideal for offices, hospitals, schools and all commercial premises. Available in 0.5 sq mm to 6.0 sq mm.",
+        "features": ["Low smoke & halogen", "Multi-strand flexible", "ISI marked", "Commercial grade", "Self-extinguishing"],
+        "image": "https://productimages.withfloats.com/actual/68e4a12956522870096e857a.png",
+        "specs": {"conductor": "Stranded Copper", "insulation": "FRLS-PVC", "voltage": "1.1 kV", "sizes": "0.5–6.0 sq mm", "standard": "IS 694"}
+    },
+    {
+        "name": "2.5 Sq.mm FR Copper Wire (Premium)",
+        "category": "Electric House Wire",
+        "description": "Our best-selling 2.5 sq mm FR copper wire — the correct size for 15A power points, AC connections and kitchen circuits as per IS 3043. Pure copper conductor with FR-PVC insulation for reliable protection. The most common size ordered by contractors and builders.",
+        "features": ["ISI marked", "Correct 15A circuit size", "Pure copper", "FR-PVC insulated", "High demand stock item"],
+        "image": "https://productimages.withfloats.com/actual/68e4a12956522870096e857a.png",
+        "specs": {"size": "2.5 sq mm", "conductor": "Copper", "insulation": "FR-PVC", "current_rating": "23A", "standard": "IS 694"}
+    },
+    # ── FLEXIBLE CABLE ──────────────────────────────────────────────────────────
+    {
+        "name": "Multi Core Control Flexible Cable",
+        "category": "Flexible Cable",
+        "description": "Multi-core copper flexible cables for control and instrumentation wiring in industrial panels, CNC machines and process control systems. Finely stranded copper conductors provide excellent flexibility for dynamic applications.",
+        "features": ["Fine stranded copper", "Multi-core design", "Oil resistant sheath", "Flexible routing", "Panel wiring grade"],
+        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "specs": {"conductor": "Copper", "cores": "2–24", "voltage": "1.1 kV", "type": "Flexible control", "standard": "IS 694"}
+    },
+    {
+        "name": "Two Core Flexible Copper Cable",
+        "category": "Flexible Cable",
+        "description": "Two-core flexible copper cable for domestic appliances, extension cords and light commercial equipment. Available in 0.75, 1.0 and 1.5 sq mm. Easy to work with, highly flexible and reliably insulated.",
+        "features": ["Appliance grade", "PVC insulated", "Easy termination", "Kink resistant", "RoHS compliant"],
+        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "specs": {"conductor": "Copper", "cores": "2", "voltage": "300/500V", "sizes": "0.75–1.5 sq mm", "application": "Appliances"}
     },
     {
         "name": "Shielded Control Flexible Cable",
         "category": "Flexible Cable",
-        "description": "Premium shielded control flexible cables for noise-sensitive applications. EMI protection ensures clean signal transmission in industrial environments.",
-        "features": ["Current limiting design", "Flawless finish", "Flexible", "EMI shielded"],
+        "description": "Shielded multi-core flexible cable with copper braid or aluminium foil screen for EMI/RFI sensitive control applications. Used in CNC machines, PLCs, variable frequency drives and any system where signal integrity is critical.",
+        "features": ["Copper braid shielded", "EMI/RFI protection", "Drain wire included", "Flexible stranded core", "Industrial grade"],
         "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
-        "specs": {"type": "Shielded Flexible", "application": "Control systems", "shielding": "Copper braid"}
+        "specs": {"shielding": "Copper braid", "cores": "2–12", "voltage": "300/500V", "application": "PLC/CNC control", "standard": "IS 694"}
     },
+    # ── CCTV CABLES ─────────────────────────────────────────────────────────────
     {
-        "name": "Single Core Housewire Cable",
-        "category": "Electric House Wire",
-        "description": "Premium single core house wiring cables for residential and commercial electrical installations. Made with pure copper conductors for maximum safety.",
-        "features": ["Pure copper conductor", "PVC insulated", "ISI marked", "Heat resistant"],
-        "image": "https://productimages.withfloats.com/actual/68e4a12956522870096e857a.png",
-        "specs": {"material": "Copper", "insulation": "PVC", "voltage": "Up to 1.1 kV"}
-    },
-    {
-        "name": "Multi Strand Wire",
-        "category": "Electric House Wire",
-        "description": "Multi-strand copper wires offering superior flexibility for internal house wiring. Easier to work with while maintaining excellent conductivity.",
-        "features": ["Multi-strand design", "High flexibility", "Safe insulation", "Easy installation"],
-        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
-        "specs": {"material": "Copper", "type": "Multi-strand", "application": "House wiring"}
-    },
-    {
-        "name": "CCTV Cables",
+        "name": "RG-6 CCS CCTV Coaxial Cable",
         "category": "CCTV Cables",
-        "description": "Specialized CCTV cables for security camera installations. Combines video and power transmission in a single cable for clean, professional installations.",
-        "features": ["Video + Power combo", "Low signal loss", "Weather resistant", "Easy termination"],
+        "description": "RG-6 coaxial cable with Copper Clad Steel (CCS) inner conductor for CCTV camera installations. 75 ohm impedance ensures minimal signal loss over long runs up to 300 metres. Most widely used coaxial cable for AHD, HD-CVI, HD-TVI and analog CCTV systems.",
+        "features": ["75 ohm impedance", "CCS inner conductor", "Al foil + braid shield", "UV resistant jacket", "Low signal loss"],
         "image": "https://productimages.withfloats.com/actual/68e49f18993a511b693b1be0.png",
-        "specs": {"type": "Coaxial + Power", "application": "CCTV Systems", "shielding": "Copper braid"}
+        "specs": {"impedance": "75 Ohm", "conductor": "CCS (Copper Clad Steel)", "shield": "Al foil + braid", "jacket": "PVC UV-resistant", "run_length": "Up to 300m"}
     },
     {
-        "name": "1.5 Sq.mm Copper Armored Wire",
+        "name": "RG-6 Pure Copper CCTV Coaxial Cable",
+        "category": "CCTV Cables",
+        "description": "RG-6 coaxial cable with pure copper inner conductor for premium CCTV and satellite TV installations. Better signal quality than CCS over long runs — the preferred choice for IP cameras, HD CCTV and antenna feeds. Oxygen-free copper (OFC) available.",
+        "features": ["Pure copper conductor", "Lowest signal loss", "75 ohm impedance", "HD camera compatible", "Satellite TV rated"],
+        "image": "https://productimages.withfloats.com/actual/68e49f18993a511b693b1be0.png",
+        "specs": {"impedance": "75 Ohm", "conductor": "Pure Copper / OFC", "shield": "Al foil + braid", "jacket": "UV-resistant PVC", "standard": "IS 10098"}
+    },
+    {
+        "name": "1+3 CCTV Combo Cable",
+        "category": "CCTV Cables",
+        "description": "1 RG-59 coaxial + 3-core power cable in a single flat jacket. Simplifies CCTV installation by carrying video signal and power supply wires together. Ideal for indoor CCTV systems with up to 12V/24V DC cameras. Eliminates double cable runs.",
+        "features": ["Video + power combined", "1 coax + 3 power cores", "Easy installation", "Neat single cable run", "Indoor CCTV use"],
+        "image": "https://productimages.withfloats.com/actual/68e49f18993a511b693b1be0.png",
+        "specs": {"coax": "RG-59 CCS", "power_cores": "3", "power_conductor": "0.5 sq mm copper", "jacket": "PVC flat", "application": "Indoor CCTV"}
+    },
+    {
+        "name": "1+4 CCTV Combo Cable",
+        "category": "CCTV Cables",
+        "description": "1 RG-59 coaxial + 4-core power cable for CCTV systems requiring PTZ (pan-tilt-zoom) control. The 4-core power section carries video, power and RS-485 control signal in one cable run. Perfect for PTZ dome cameras in commercial installations.",
+        "features": ["PTZ compatible", "1 coax + 4 power cores", "RS-485 control ready", "Reduced cable clutter", "Commercial grade"],
+        "image": "https://productimages.withfloats.com/actual/68e49f18993a511b693b1be0.png",
+        "specs": {"coax": "RG-59 CCS", "power_cores": "4", "power_conductor": "0.5 sq mm copper", "jacket": "PVC flat", "application": "PTZ CCTV cameras"}
+    },
+    {
+        "name": "1+6 CCTV Combo Cable",
+        "category": "CCTV Cables",
+        "description": "1 RG-59 coaxial + 6-core power cable for advanced CCTV and access control integration. The 6-core section supports video, power, audio, alarm relay and control signals in a single installation run. Reduces cabling complexity in large security systems.",
+        "features": ["6 function cores", "Audio & alarm support", "Access control wiring", "Single run convenience", "Large system grade"],
+        "image": "https://productimages.withfloats.com/actual/68e49f18993a511b693b1be0.png",
+        "specs": {"coax": "RG-59 CCS", "power_cores": "6", "power_conductor": "0.5 sq mm copper", "jacket": "PVC flat", "application": "Integrated security systems"}
+    },
+    # ── COPPER WIRE ─────────────────────────────────────────────────────────────
+    {
+        "name": "Bare Copper Wire",
         "category": "Copper Wire",
-        "description": "1.5 sq.mm copper armored wire for protected power transmission. Combines copper's conductivity with armoured protection for versatile applications.",
-        "features": ["High conductivity", "Armoured protection", "Versatile use", "Quality tested"],
+        "description": "High purity bare copper wire for earthing, electrical connections and conductor manufacturing. 99.9% electrolytic grade copper. Available in round and bunched stranded forms from 0.5 sq mm to 50 sq mm. Used extensively by panel builders, transformer manufacturers and electricians.",
+        "features": ["99.9% pure copper", "Excellent conductivity", "Earthing applications", "Round & stranded", "Low resistance"],
         "image": "https://productimages.withfloats.com/actual/68e49a12b575d00c5aa771b6.jpg",
-        "specs": {"size": "1.5 sq.mm", "material": "Copper", "type": "Armoured"}
+        "specs": {"purity": "99.9% electrolytic", "sizes": "0.5–50 sq mm", "type": "Bare / uncoated", "application": "Earthing, connections", "standard": "IS 8130"}
     },
     {
-        "name": "Submersible Cable",
+        "name": "Tinned Copper Wire",
+        "category": "Copper Wire",
+        "description": "Electrolytic copper wire with a uniform tin coating for superior corrosion resistance and solderability. Used in marine wiring, humid environments and wherever soldering is required. The tin coat prevents oxidation and ensures reliable long-term connections. Sizes 0.5 to 50 sq mm.",
+        "features": ["Tin coated", "Corrosion resistant", "Easy soldering", "Marine grade", "Anti-oxidation"],
+        "image": "https://productimages.withfloats.com/actual/68e49a12b575d00c5aa771b6.jpg",
+        "specs": {"coating": "Tin", "base": "Electrolytic copper", "sizes": "0.5–50 sq mm", "application": "Marine, humid environments", "standard": "IS 8130"}
+    },
+    {
+        "name": "Copper Earthing Wire (EC Grade)",
+        "category": "Copper Wire",
+        "description": "EC (Electrical Conductivity) grade copper earthing wire for proper grounding of electrical installations as per IS 3043. Available in solid and stranded construction. Ensures low impedance earth path to protect personnel and equipment from fault currents.",
+        "features": ["EC grade copper", "IS 3043 compliant", "Solid & stranded", "Low earth resistance", "Safety critical"],
+        "image": "https://productimages.withfloats.com/actual/68e49a12b575d00c5aa771b6.jpg",
+        "specs": {"grade": "EC (Electrical Conductivity)", "sizes": "1.5–50 sq mm", "type": "Solid / Stranded", "application": "Earthing & grounding", "standard": "IS 3043 / IS 8130"}
+    },
+    # ── SUBMERSIBLE CABLE ───────────────────────────────────────────────────────
+    {
+        "name": "1.5 Sq.mm Single Phase Submersible Cable",
         "category": "Submersible Cable",
-        "description": "Specially designed submersible pump cables for underwater motor applications. Waterproof construction ensures reliable performance in borewells and water pumps.",
-        "features": ["Waterproof design", "UV resistant", "High insulation", "Pump rated"],
+        "description": "1.5 sq mm single-phase (2-core) submersible pump cable for ½ HP to 1 HP domestic borewell pumps. Special waterproof PVC insulation rated for continuous submersion. Resists groundwater chemicals, motor oil and UV radiation at surface. ISI marked.",
+        "features": ["ISI marked", "Waterproof PVC", "1/2–1 HP pump rated", "Chemical resistant", "Borewell grade"],
         "image": "https://fpimages.withfloats.com/actual/68e60002327a323aaf2eb218.png",
-        "specs": {"type": "Submersible", "application": "Water pumps", "insulation": "PVC waterproof"}
+        "specs": {"size": "1.5 sq mm", "cores": "2 (single phase)", "voltage": "300/500V", "pump_rating": "0.5–1 HP", "standard": "IS 694"}
+    },
+    {
+        "name": "2.5 Sq.mm Single Phase Submersible Cable",
+        "category": "Submersible Cable",
+        "description": "2.5 sq mm single-phase submersible cable for 1 HP to 2 HP borewell and water well pumps. Most popular size for domestic borewells up to 150 feet depth. Waterproof construction with heavy duty outer jacket for long-term underground and underwater use.",
+        "features": ["ISI marked", "Most popular domestic size", "1–2 HP rating", "Heavy duty jacket", "UV + chemical resistant"],
+        "image": "https://fpimages.withfloats.com/actual/68e60002327a323aaf2eb218.png",
+        "specs": {"size": "2.5 sq mm", "cores": "2 (single phase)", "voltage": "300/500V", "pump_rating": "1–2 HP", "standard": "IS 694"}
+    },
+    {
+        "name": "4 Sq.mm Three Phase Submersible Cable",
+        "category": "Submersible Cable",
+        "description": "4 sq mm 3-core three-phase submersible cable for 3 HP to 7.5 HP agricultural and industrial pumps. Essential for deep borewells beyond 200 feet and high-capacity water supply systems. Reinforced waterproof jacket withstands high pressure and continuous immersion.",
+        "features": ["Three-phase 3-core", "3–7.5 HP rating", "Deep borewell rated", "Reinforced jacket", "Agriculture grade"],
+        "image": "https://fpimages.withfloats.com/actual/68e60002327a323aaf2eb218.png",
+        "specs": {"size": "4 sq mm", "cores": "3 (three phase)", "voltage": "415V", "pump_rating": "3–7.5 HP", "standard": "IS 694"}
+    },
+    {
+        "name": "6 Sq.mm Three Phase Submersible Cable",
+        "category": "Submersible Cable",
+        "description": "6 sq mm 3-core three-phase submersible cable for high-capacity 7.5 HP to 15 HP pumps used in deep borewells, irrigation systems and commercial water supply. Thick waterproof PVC insulation ensures safe operation at depths exceeding 300 feet.",
+        "features": ["High HP rating", "7.5–15 HP capacity", "Deep well 300ft+", "Extra thick insulation", "Industrial grade"],
+        "image": "https://fpimages.withfloats.com/actual/68e60002327a323aaf2eb218.png",
+        "specs": {"size": "6 sq mm", "cores": "3 (three phase)", "voltage": "415V", "pump_rating": "7.5–15 HP", "standard": "IS 694"}
+    },
+    # ── CAT6 & LAN CABLES ───────────────────────────────────────────────────────
+    {
+        "name": "CAT6 UTP Cable — 305mtr Box",
+        "category": "CAT6 & LAN Cables",
+        "description": "CAT6 unshielded twisted pair (UTP) LAN cable in a full 305-metre pull box for network installations. Supports Gigabit Ethernet (1000BASE-T) and 10-Gigabit Ethernet up to 37m (10GBASE-T). 23 AWG solid copper conductors, 250 MHz bandwidth. Ideal for structured cabling of office buildings, server rooms and residential complexes.",
+        "features": ["Gigabit Ethernet ready", "250 MHz bandwidth", "23 AWG solid copper", "Full 305mtr box", "EIA/TIA 568-C.2 compliant"],
+        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "specs": {"standard": "CAT6 / EIA-568-C.2", "conductors": "4 pairs / 23 AWG", "bandwidth": "250 MHz", "length": "305 metres", "application": "Gigabit LAN, structured cabling"}
+    },
+    {
+        "name": "CAT6 UTP Cable — 90mtr Box",
+        "category": "CAT6 & LAN Cables",
+        "description": "CAT6 UTP cable in a convenient 90-metre box for smaller installations — single floors, retail shops, small offices and home networks. Same high-quality 23 AWG solid copper with 250 MHz performance as the 305mtr roll, in an easy-to-handle pack size.",
+        "features": ["Compact 90mtr pack", "Gigabit compatible", "23 AWG copper", "Easy to handle", "Home & small office"],
+        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "specs": {"standard": "CAT6 / EIA-568-C.2", "conductors": "4 pairs / 23 AWG", "bandwidth": "250 MHz", "length": "90 metres", "application": "Home, retail, small office"}
+    },
+    {
+        "name": "CAT6 Outdoor Armoured LAN Cable",
+        "category": "CAT6 & LAN Cables",
+        "description": "CAT6 armoured LAN cable for outdoor, underground and long-distance campus network runs. Steel wire armour provides rodent and mechanical protection while the UV-stabilised PE outer jacket handles direct burial. Bridges buildings, connects outdoor equipment and spans campuses without conduit in many cases.",
+        "features": ["Direct burial rated", "Steel wire armour", "UV-resistant PE jacket", "Rodent proof", "Campus networking"],
+        "image": "https://productimages.withfloats.com/actual/68e49c9aed06f3bbb445df55.jpg",
+        "specs": {"standard": "CAT6", "armour": "Steel wire (SWA)", "jacket": "UV-stabilised PE", "conductor": "23 AWG solid copper", "application": "Outdoor, underground, campus"}
+    },
+    {
+        "name": "CAT5e UTP Cable — 305mtr Box",
+        "category": "CAT6 & LAN Cables",
+        "description": "CAT5e UTP cable in a 305-metre box — the most economical choice for 100 Mbps Fast Ethernet and basic Gigabit networks. Suitable for budget-conscious projects, CCTV network backbones, IP phone systems and access control wiring where CAT6 performance is not required.",
+        "features": ["Fast Ethernet ready", "Budget friendly", "305mtr full box", "24 AWG copper", "CCTV & IP phone wiring"],
+        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "specs": {"standard": "CAT5e / EIA-568-B.2", "conductors": "4 pairs / 24 AWG", "bandwidth": "100 MHz", "length": "305 metres", "application": "100Mbps–1Gbps Ethernet"}
+    },
+    # ── TELEPHONE & COMMUNICATION CABLE ────────────────────────────────────────
+    {
+        "name": "TCBC Telephone Wire (Twisted Pair)",
+        "category": "Telephone & Communication Cable",
+        "description": "Tinned Copper Braided Conductor (TCBC) telephone wire — the standard internal telephone wiring cable for EPABX systems, intercom networks and telephone extensions in Indian offices and residential complexes. Twisted pair construction minimises crosstalk and interference between lines.",
+        "features": ["Twisted pair construction", "Tinned copper conductor", "EPABX compatible", "Low crosstalk", "ISI compliant"],
+        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "specs": {"conductor": "Tinned Copper", "type": "Twisted pair", "application": "EPABX, telephone extension", "insulation": "PVC", "standard": "IS 6239"}
+    },
+    {
+        "name": "2 Pair Telephone Cable",
+        "category": "Telephone & Communication Cable",
+        "description": "2-pair (4-wire) telephone cable for single telephone line with spare pair. Used for last-mile telephone connections, door-phone wiring and basic intercom systems. Twisted pair construction for noise immunity. Available in indoor and outdoor variants.",
+        "features": ["2 twisted pairs", "1 line + 1 spare", "Low attenuation", "Doorphone wiring", "Intercom ready"],
+        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "specs": {"pairs": "2 (4 wires)", "conductor": "0.5mm copper", "insulation": "PVC colour coded", "application": "Telephone, intercom, doorphone", "standard": "IS 6239"}
+    },
+    {
+        "name": "4 Pair Telephone Cable",
+        "category": "Telephone & Communication Cable",
+        "description": "4-pair (8-wire) telephone cable for multi-line telephone systems and EPABX distribution. Supports up to 4 independent telephone or intercom lines in one cable run. Standard for office EPABX wiring from distribution box to individual workstations.",
+        "features": ["4 twisted pairs", "EPABX distribution", "4 independent lines", "Colour coded pairs", "Office grade"],
+        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "specs": {"pairs": "4 (8 wires)", "conductor": "0.5mm copper", "insulation": "PVC colour coded", "application": "EPABX, multi-line office", "standard": "IS 6239"}
+    },
+    {
+        "name": "Multi Pair Telephone Cable (10 / 20 Pair)",
+        "category": "Telephone & Communication Cable",
+        "description": "Multi-pair telephone distribution cable in 10-pair and 20-pair configurations for building riser cables and main distribution frames (MDF). Connects the telephone exchange or EPABX main unit to floor-level distribution boxes. Essential for structured telephone cabling in large offices, hotels and commercial buildings.",
+        "features": ["10 or 20 pairs", "Riser / backbone cable", "MDF to IDF runs", "Colour coded pairs", "High pair count"],
+        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "specs": {"pairs": "10 or 20 pairs", "conductor": "0.5mm copper", "insulation": "PVC", "application": "Building riser, MDF/IDF", "standard": "IS 6239"}
     },
 ]
 
@@ -549,6 +725,19 @@ async def admin_get_stats(x_admin_key: str = Header(default="")):
     dealers  = await db.dealer_enquiries.count_documents({})
     products = await db.products.count_documents({})
     return {"contacts": contacts, "dealer_enquiries": dealers, "products": products}
+
+@api_router.post("/admin/products/reseed")
+async def admin_reseed_products(x_admin_key: str = Header(default="")):
+    """Clear all products and re-insert from PRODUCTS_DATA. Protected by admin key."""
+    _check_admin(x_admin_key)
+    await db.products.delete_many({})
+    inserted = []
+    for p in PRODUCTS_DATA:
+        product = Product(**p)
+        doc = product.model_dump()
+        await db.products.insert_one(doc)
+        inserted.append(doc["name"])
+    return {"success": True, "inserted": len(inserted), "products": inserted}
 
 @api_router.get("/company")
 async def get_company_info():

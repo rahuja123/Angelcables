@@ -72,12 +72,14 @@ export default function ProductsPage() {
   return (
     <div>
       <Helmet>
-        <title>Products — Electrical Wires & Cables | Angel Cables</title>
-        <meta name="description" content="Browse Angel Cables' full range of ISI-marked electrical wires, house wiring cables, armoured cables and industrial cables. Filter by category and download the product catalog." />
+        <title>Buy Electrical Wires & Cables in Delhi | Armoured, House Wire, CCTV, Submersible | Angel Cables</title>
+        <meta name="description" content="Buy ISI-certified electrical wires & cables direct from manufacturer in Delhi. Armoured cable, electric house wire, flexible cable, CCTV cable, submersible cable & copper wire. Bulk pricing available. Angel Cables — R K Enterprises." />
+        <meta name="keywords" content="buy armoured cable Delhi, house wire price Delhi, flexible cable supplier, CCTV cable Delhi, submersible cable Delhi, copper wire Delhi, electrical cable wholesale, ISI wire manufacturer" />
         <link rel="canonical" href="https://angelcables.com/products" />
-        <meta property="og:title" content="Products — Electrical Wires & Cables | Angel Cables" />
-        <meta property="og:description" content="Full product range from Angel Cables — house wiring, armoured, industrial and specialty cables manufactured in Delhi." />
+        <meta property="og:title" content="Buy Electrical Wires & Cables in Delhi | Angel Cables" />
+        <meta property="og:description" content="ISI-certified armoured cable, house wire, flexible cable, CCTV cable & more — direct from manufacturer in Delhi. Bulk pricing available." />
         <meta property="og:url" content="https://angelcables.com/products" />
+        <meta property="og:image" content="https://angelcables.com/logo.png" />
       </Helmet>
       {/* Page Header */}
       <div className="bg-[#0F172A] py-12 md:py-16" data-testid="products-header">

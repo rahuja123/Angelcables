@@ -8,8 +8,8 @@ import axios from "axios";
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const stats = [
-  { value: "19+", label: "Years Experience" },
-  { value: "500+", label: "Happy Clients" },
+  { value: `${new Date().getFullYear() - 2005}+`, label: "Years Experience" },
+  { value: "50K+", label: "Happy Clients" },
   { value: "12+", label: "Product Lines" },
   { value: "Delhi", label: "Based in India" },
 ];
@@ -96,14 +96,93 @@ export default function HomePage() {
   return (
     <div>
       <Helmet>
-        <title>Angel Cables — Premium Wires & Cables Manufacturer in Delhi</title>
-        <meta name="description" content="Angel Cables manufactures high-quality electrical wires, house wiring cables, armoured cables and industrial cables in Delhi. ISI marked, trusted by contractors and dealers across India." />
-        <meta name="keywords" content="electrical cables manufacturer Delhi, wires manufacturer India, house wiring cable, armoured cable, industrial cable, ISI marked cables" />
+        <title>Angel Cables Delhi | ISI Certified Wire & Cable Manufacturer | R K Enterprises</title>
+        <meta name="description" content="Angel Cables (R K Enterprises) — trusted manufacturer & supplier of ISI-certified electrical wires & cables in Delhi since 2005. Armoured cable, house wire, flexible cable, CCTV cable, submersible cable & more. Bulk orders & dealer enquiries welcome. Call +91 9810011248." />
+        <meta name="keywords" content="cable manufacturer Delhi, wire manufacturer Delhi, armoured cable Delhi, house wire Delhi, electric wire Delhi, flexible cable, CCTV cable, submersible cable, copper wire, ISI certified cable, wholesale cable supplier Delhi, Lawrence Road Industrial Area, R K Enterprises, Angel Cables" />
         <link rel="canonical" href="https://angelcables.com/" />
-        <meta property="og:title" content="Angel Cables — Premium Wires & Cables Manufacturer" />
-        <meta property="og:description" content="ISI-marked electrical wires and cables direct from factory. Trusted by thousands of contractors and dealers across India." />
+        <meta property="og:title" content="Angel Cables Delhi | Wire & Cable Manufacturer Since 2005" />
+        <meta property="og:description" content="ISI-certified electrical wires and cables direct from factory in Delhi. Armoured, house wire, flexible, CCTV & submersible cables. Trusted by contractors and dealers across India." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://angelcables.com/" />
+        <meta property="og:image" content="https://angelcables.com/logo.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://angelcables.com",
+          "name": "Angel Cables — R K Enterprises",
+          "description": "Leading manufacturer and supplier of ISI-certified electrical wires and cables in Delhi. Products include armoured cable, house wire, flexible cable, CCTV cables, submersible cable and copper wire.",
+          "url": "https://angelcables.com",
+          "telephone": ["+91-9810011248", "+91-9873816127"],
+          "email": "info@angelcables.com",
+          "image": "https://angelcables.com/logo.png",
+          "logo": "https://angelcables.com/logo.png",
+          "foundingDate": "2005",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "B-70/32, DSIDC, Lawrence Road Industrial Area",
+            "addressLocality": "Delhi",
+            "postalCode": "110035",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 28.6775005,
+            "longitude": 77.14972139999999
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "10:00",
+            "closes": "20:00"
+          },
+          "hasMap": "https://maps.google.com/?q=28.6775005,77.14972139999999",
+          "priceRange": "₹₹",
+          "currenciesAccepted": "INR",
+          "paymentAccepted": "Cash, Bank Transfer, UPI",
+          "areaServed": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "sameAs": ["https://angelcables.com"]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Angel Cables — R K Enterprises",
+          "url": "https://angelcables.com",
+          "logo": "https://angelcables.com/logo.png",
+          "contactPoint": [{
+            "@type": "ContactPoint",
+            "telephone": "+91-9810011248",
+            "contactType": "sales",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi"]
+          },{
+            "@type": "ContactPoint",
+            "telephone": "+91-9873816127",
+            "contactType": "customer service",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi"]
+          }]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://angelcables.com/#reviews",
+          "name": "Angel Cables — R K Enterprises",
+          "review": testimonials.map(t => ({
+            "@type": "Review",
+            "author": { "@type": "Person", "name": t.name },
+            "reviewBody": t.quote,
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+          })),
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": String(testimonials.length),
+            "bestRating": "5"
+          }
+        })}</script>
       </Helmet>
       {/* HERO */}
       <section className="relative bg-[#0F172A] overflow-hidden" data-testid="hero-section">
@@ -263,7 +342,7 @@ export default function HomePage() {
                 >
                   <div className="aspect-[16/10] bg-slate-100 overflow-hidden">
                     <img
-                      src={categoryImages[cat] || "https://fplogoimages.withfloats.com/actual/68e49dcdc5794dccda71a861.png"}
+                      src={categoryImages[cat] || "/logo.png"}
                       alt={cat}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />

@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
 
-const LOGO = "https://fplogoimages.withfloats.com/actual/68e49dcdc5794dccda71a861.png";
+const LOGO = "/logo.png";
 
 const categories = [
-  "Armoured Cable", "Flexible Cable", "Electric House Wire",
-  "CCTV Cables", "Copper Wire", "Submersible Cable"
+  "Armoured Cable",
+  "Electric House Wire",
+  "Flexible Cable",
+  "CCTV Cables",
+  "Submersible Cable",
+  "Copper Wire",
+  "CAT6 & LAN Cables",
+  "Telephone & Communication Cable",
 ];
 
 export default function Footer() {
@@ -36,9 +42,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-6" data-testid="footer-logo">
-              <div className="h-10 w-[88px] overflow-hidden shrink-0">
-                <img src={LOGO} alt="Angel Cables" className="h-[44px] w-[96px] -mt-[2px] -ml-[4px] block object-cover" />
-              </div>
+              <img src={LOGO} alt="Angel Cables" className="h-8 w-auto object-contain shrink-0" />
               <div>
                 <span className="text-xl font-black tracking-tight block" style={{ fontFamily: 'Chivo' }}>ANGEL CABLES</span>
                 <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-400">Since 2005</span>
@@ -75,6 +79,7 @@ export default function Footer() {
                 { label: "Home", path: "/" },
                 { label: "All Products", path: "/products" },
                 { label: "Product Catalog", path: "/catalog" },
+                { label: "Wiring Guides", path: "/blog" },
                 { label: "About Us", path: "/about" },
                 { label: "Become a Dealer", path: "/dealers" },
                 { label: "FAQ", path: "/faq" },
@@ -97,13 +102,17 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-slate-400 mb-6">Contact</h4>
             <div className="space-y-4">
-              <a href="tel:+919873816127" className="flex items-start gap-3 text-slate-300 hover:text-white transition-colors text-sm" data-testid="footer-phone">
+              <a href="tel:+919810011248" className="flex items-start gap-3 text-slate-300 hover:text-white transition-colors text-sm" data-testid="footer-phone-1">
+                <Phone size={16} className="mt-0.5 shrink-0 text-[#EA580C]" />
+                +91 9810011248
+              </a>
+              <a href="tel:+919873816127" className="flex items-start gap-3 text-slate-300 hover:text-white transition-colors text-sm" data-testid="footer-phone-2">
                 <Phone size={16} className="mt-0.5 shrink-0 text-[#EA580C]" />
                 +91 9873816127
               </a>
-              <a href="mailto:rkenterprises.ahuja@gmail.com" className="flex items-start gap-3 text-slate-300 hover:text-white transition-colors text-sm" data-testid="footer-email">
+              <a href="mailto:info@angelcables.com" className="flex items-start gap-3 text-slate-300 hover:text-white transition-colors text-sm" data-testid="footer-email">
                 <Mail size={16} className="mt-0.5 shrink-0 text-[#EA580C]" />
-                rkenterprises.ahuja@gmail.com
+                info@angelcables.com
               </a>
               <div className="flex items-start gap-3 text-slate-300 text-sm" data-testid="footer-address">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-[#EA580C]" />

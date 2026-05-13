@@ -32,12 +32,14 @@ export default function AboutPage() {
   return (
     <div>
       <Helmet>
-        <title>About Us — Angel Cables | Cables Manufacturer Delhi Since 2000</title>
-        <meta name="description" content="Angel Cables is a leading manufacturer of ISI-marked electrical wires and cables based in Delhi, India. Two decades of precision manufacturing trusted by contractors, builders and dealers nationwide." />
+        <title>About Angel Cables | Wire & Cable Manufacturer in Delhi Since 2005 | R K Enterprises</title>
+        <meta name="description" content="Angel Cables (R K Enterprises) has been manufacturing ISI-certified electrical wires and cables in Delhi since 2005. Trusted by contractors, builders and industrial buyers across India. Located at Lawrence Road Industrial Area, Delhi." />
+        <meta name="keywords" content="Angel Cables about, R K Enterprises Delhi, cable manufacturer Delhi, wire manufacturer Lawrence Road, ISI cable manufacturer India" />
         <link rel="canonical" href="https://angelcables.com/about" />
-        <meta property="og:title" content="About Angel Cables — Two Decades of Manufacturing Excellence" />
-        <meta property="og:description" content="Learn about Angel Cables, a Delhi-based manufacturer of high-quality electrical wires and cables with over 20 years of industry experience." />
+        <meta property="og:title" content="About Angel Cables — Delhi Wire & Cable Manufacturer Since 2005" />
+        <meta property="og:description" content="Learn about Angel Cables (R K Enterprises), a trusted ISI-certified wire and cable manufacturer based in Delhi since 2005." />
         <meta property="og:url" content="https://angelcables.com/about" />
+        <meta property="og:image" content="https://angelcables.com/logo.png" />
       </Helmet>
       {/* Header */}
       <div className="bg-[#0F172A] py-12 md:py-16" data-testid="about-header">
