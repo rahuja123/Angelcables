@@ -10,7 +10,7 @@ const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const stats = [
   { value: `${new Date().getFullYear() - 2005}+`, label: "Years Experience" },
   { value: "50K+", label: "Happy Clients" },
-  { value: "12+", label: "Product Lines" },
+  { value: "8", label: "Product Lines" },
   { value: "Delhi", label: "Based in India" },
 ];
 
