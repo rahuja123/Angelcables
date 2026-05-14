@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Navy background matching brand -->
+  <rect width="32" height="32" fill="#0F172A" rx="5"/>
+  <!-- Letter A in brand orange -->
+  <text
+    x="16"
+    y="24"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="22"
+    text-anchor="middle"
+    fill="#EA580C"
+    letter-spacing="-1"
+  >A</text>
+</svg>
