@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "About Us — Delhi Cable Manufacturer Since 2005",
   description:
-    "Angel Cables (R K Enterprises) has made ISI-certified wires and cables in Lawrence Road Industrial Area, Delhi since 2005. Trusted across North India.",
+    "Angel Cables (R K Enterprises) has made ISI-certified wires and cables in Lawrence Road Industrial Area, Delhi since 2005. Delivering all over India.",
   path: "/about",
 });
 
@@ -64,7 +64,7 @@ export default function AboutPage() {
             </p>
             <p className="text-slate-500 mt-4 leading-relaxed">
               From residential house wiring to heavy-duty industrial armoured cables, we serve contractors, builders, electricians and industrial buyers
-              across North India.
+              all over India.
             </p>
           </div>
           <div className="relative">

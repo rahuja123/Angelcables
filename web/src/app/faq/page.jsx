@@ -9,7 +9,7 @@ import { pageMetadata, faqJsonLd, whatsappLink, HOURS } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "FAQ — Cable & Wire Questions Answered",
   description:
-    "Answers on ISI certification, cable sizing, armoured vs flexible cable, delivery across North India, GST invoices, bulk orders and dealership.",
+    "Answers on ISI certification, cable sizing, armoured vs flexible cable, delivery across India, GST invoices, bulk orders and dealership.",
   path: "/faq",
 });
 
@@ -44,7 +44,7 @@ const faqs = [
       },
       {
         q: "Do you deliver outside Delhi?",
-        a: "Yes. We supply across North India including Delhi NCR, Haryana, Rajasthan, UP, Punjab, and Himachal Pradesh. For other states, we can arrange transport through logistics partners. Delivery time and cost varies by location — contact us for details.",
+        a: "Yes — we deliver all over India. Orders within Delhi NCR go out on our own transport, and we ship to every other state through trusted logistics partners. Delivery time and cost vary by location, so contact us with your city for details.",
       },
       {
         q: "How long does delivery take?",

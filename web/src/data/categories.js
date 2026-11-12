@@ -12,7 +12,7 @@ export const categories = [
     intro: [
       "Angel Cables manufactures steel wire armoured (SWA) power cables at our factory in Lawrence Road Industrial Area, Delhi. Our armoured range covers 2 core, 3.5 core and 4 core cables with aluminium or copper conductors in sizes from 1.5 sq mm to 300 sq mm, rated for 1.1 kV and built to IS 1554.",
       "Armoured cable is the right choice wherever a cable runs underground, outdoors, along cable trays in factories, or anywhere it can be crushed, cut or chewed by rodents. The galvanised steel wire layer takes the mechanical load, so the insulated cores inside keep working safely for decades.",
-      "Contractors, builders, electrical consultants and industrial buyers across Delhi NCR order armoured cable from us by the drum at factory-direct prices, with GST invoices and quick dispatch.",
+      "Contractors, builders, electrical consultants and industrial buyers across India order armoured cable from us by the drum at factory-direct prices, with GST invoices and quick dispatch.",
     ],
     uses: [
       "Underground power feeders to buildings, pumps and street lighting",
@@ -94,7 +94,7 @@ export const categories = [
     image: "flexible-cable",
     intro: [
       "Our flexible cables use finely stranded copper conductors so they bend repeatedly without cracking. The range covers two-core cables for appliances and extension leads, multi-core control cables (2 to 24 cores) for panels and machines, and shielded control cables for signal-sensitive equipment.",
-      "Shielded flexible cable has a copper braid screen that blocks electrical noise from motors and variable frequency drives, keeping PLC, sensor and CNC signals clean. It is the cable panel builders and automation engineers in Delhi NCR specify for control wiring.",
+      "Shielded flexible cable has a copper braid screen that blocks electrical noise from motors and variable frequency drives, keeping PLC, sensor and CNC signals clean. It is the cable panel builders and automation engineers across India specify for control wiring.",
     ],
     uses: [
       "Control panel and MCC wiring",
@@ -124,10 +124,10 @@ export const categories = [
     h1: "CCTV Cable Supplier in Delhi — RG-6 & Combo Cables",
     metaTitle: "CCTV Cable in Delhi — RG-6 & Combo Cables",
     metaDescription:
-      "RG-6 coaxial (CCS & pure copper) and 1+3, 1+4, 1+6 CCTV combo cable for HD and analog cameras. Bulk rolls for security installers in Delhi NCR.",
+      "RG-6 coaxial (CCS & pure copper) and 1+3, 1+4, 1+6 CCTV combo cable for HD and analog cameras. Bulk rolls for security installers across India.",
     image: "cctv-cable",
     intro: [
-      "Angel Cables supplies CCTV cable for security installers, builders and system integrators across Delhi NCR. Our range includes RG-6 75-ohm coaxial cable in CCS (copper clad steel) and pure copper, plus combo cables that carry video and power in one jacket.",
+      "Angel Cables supplies CCTV cable for security installers, builders and system integrators across India. Our range includes RG-6 75-ohm coaxial cable in CCS (copper clad steel) and pure copper, plus combo cables that carry video and power in one jacket.",
       "1+3, 1+4 and 1+6 combo cables pair an RG-59 coaxial core with 3, 4 or 6 power cores, so each camera needs only one cable run. The extra cores carry PTZ control, audio or alarm signals in larger systems.",
       "Choose pure copper RG-6 for long runs and HD cameras where signal quality matters most; CCS RG-6 is the economical choice for typical runs up to about 300 metres.",
     ],
@@ -182,7 +182,7 @@ export const categories = [
       },
       {
         q: "Do you sell submersible cable to dealers?",
-        a: "Yes. Pump and hardware dealers across North India buy submersible cable from us in bulk. Apply through our dealer page or call us for rates.",
+        a: "Yes. Pump and hardware dealers across India buy submersible cable from us in bulk. Apply through our dealer page or call us for rates.",
       },
     ],
     relatedBlogs: ["submersible-cable-borewell-india"],
@@ -223,7 +223,7 @@ export const categories = [
     h1: "CAT6 LAN Cable Supplier in Delhi",
     metaTitle: "CAT6 LAN Cable Supplier in Delhi — 305m Box",
     metaDescription:
-      "CAT6 UTP LAN cable in 305 m and 90 m boxes, outdoor armoured CAT6 and CAT5e cable for offices, CCTV and networking. Bulk supply in Delhi NCR.",
+      "CAT6 UTP LAN cable in 305 m and 90 m boxes, outdoor armoured CAT6 and CAT5e cable for offices, CCTV and networking. Bulk supply across India.",
     image: "flexible-cable",
     intro: [
       "Angel Cables supplies structured networking cable for offices, schools, hospitals, housing societies and IP CCTV projects. Our CAT6 UTP cable uses 23 AWG solid copper conductors with 250 MHz bandwidth for reliable Gigabit Ethernet.",

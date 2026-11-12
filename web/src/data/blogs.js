@@ -132,7 +132,7 @@ export const blogs = [
       {
         type: "cta",
         heading: "Sourcing AC Wire for a Project?",
-        text: "Get factory-direct pricing on ISI-certified 2.5 sq.mm and 4 sq.mm FRLS wire. We supply contractors, builders and dealers across North India.",
+        text: "Get factory-direct pricing on ISI-certified 2.5 sq.mm and 4 sq.mm FRLS wire. We supply contractors, builders and dealers across India.",
         buttonText: "Get a Bulk Quote",
         buttonLink: "/contact",
       },
@@ -325,12 +325,12 @@ export const blogs = [
           "100% electrolytic copper conductor",
           "Available in standard 90m and 180m drums, and bulk coil lengths",
           "GST invoices with HSN codes for all B2B orders",
-          "Pan-India supply — based in Delhi with logistics to Haryana, UP, Rajasthan, Punjab and beyond",
+          "Pan-India supply — based in Delhi, delivering to every state in India",
         ],
       },
       {
         type: "cta",
-        heading: "Building or Wiring a Project in North India?",
+        heading: "Building or Wiring a Project Anywhere in India?",
         text: "Get factory-direct pricing on ISI-certified FR and FRLS house wire. We supply contractors, developers and dealers at bulk rates.",
         buttonText: "Request a Quote",
         buttonLink: "/contact",
@@ -529,7 +529,7 @@ export const blogs = [
       },
       {
         type: "p",
-        text: "Angel Cables manufactures SWA armoured cables at our Delhi factory, supplying contractors, builders, industrial buyers and agricultural dealers across North India. Our armoured cable range covers 2-core through 4-core configurations in conductor sizes from 1.5 sq.mm to 95 sq.mm, in both PVC and XLPE insulation.",
+        text: "Angel Cables manufactures SWA armoured cables at our Delhi factory, supplying contractors, builders, industrial buyers and agricultural dealers across India. Our armoured cable range covers 2-core through 4-core configurations in conductor sizes from 1.5 sq.mm to 95 sq.mm, in both PVC and XLPE insulation.",
       },
       {
         type: "p",
@@ -550,7 +550,7 @@ export const blogs = [
       {
         type: "cta",
         heading: "Need Armoured Cable for a Project?",
-        text: "Get factory-direct pricing on SWA armoured cable. We supply contractors, electrical consultants and industrial buyers across North India.",
+        text: "Get factory-direct pricing on SWA armoured cable. We supply contractors, electrical consultants and industrial buyers across India.",
         buttonText: "Get a Bulk Quote",
         buttonLink: "/contact",
       },
@@ -700,7 +700,7 @@ export const blogs = [
       },
       {
         type: "p",
-        text: "Angel Cables manufactures ISI-certified submersible pump cables at our Delhi facility, supplying pump dealers, agricultural equipment suppliers, and contractors across North India. Our submersible cable range covers 1.0 sq.mm to 10 sq.mm in 2-core and 3-core flat configurations, in both single-phase and three-phase specifications.",
+        text: "Angel Cables manufactures ISI-certified submersible pump cables at our Delhi facility, supplying pump dealers, agricultural equipment suppliers, and contractors across India. Our submersible cable range covers 1.0 sq.mm to 10 sq.mm in 2-core and 3-core flat configurations, in both single-phase and three-phase specifications.",
       },
       {
         type: "p",
@@ -713,7 +713,7 @@ export const blogs = [
       {
         type: "cta",
         heading: "Supply Submersible Pumps or Borewell Equipment?",
-        text: "Get factory-direct pricing on ISI-certified submersible cable. Custom lengths available. We supply pump dealers and contractors across North India.",
+        text: "Get factory-direct pricing on ISI-certified submersible cable. Custom lengths available. We supply pump dealers and contractors across India.",
         buttonText: "Talk to Our Team",
         buttonLink: "/contact",
       },
@@ -862,7 +862,7 @@ export const blogs = [
       },
       {
         type: "p",
-        text: "Our copper house wire range (FR and FRLS, 1.0 to 6.0 sq.mm) and our bare copper wire products are manufactured at our Delhi factory and supplied direct to contractors, builders and dealers across North India — at pricing that is factory-direct, with no retail markup.",
+        text: "Our copper house wire range (FR and FRLS, 1.0 to 6.0 sq.mm) and our bare copper wire products are manufactured at our Delhi factory and supplied direct to contractors, builders and dealers across India — at pricing that is factory-direct, with no retail markup.",
       },
       {
         type: "cta",
@@ -1054,7 +1054,7 @@ export const blogs = [
       {
         type: "cta",
         heading: "Specifying Wire for a New Construction Project?",
-        text: "Get the right wire sizes for every circuit, with ISI certification and factory-direct pricing. We supply builders, contractors and electricians across North India.",
+        text: "Get the right wire sizes for every circuit, with ISI certification and factory-direct pricing. We supply builders, contractors and electricians across India.",
         buttonText: "Get a Quote",
         buttonLink: "/contact",
       },

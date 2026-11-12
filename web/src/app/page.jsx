@@ -248,7 +248,7 @@ export default function HomePage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 md:px-8">
           <p className="text-xs font-mono uppercase tracking-[0.3em] text-brand">About Angel Cables</p>
-          <h2 className="text-3xl md:text-4xl font-black text-navy mt-2 tracking-tight">Your Wire &amp; Cable Supplier in Delhi NCR</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-navy mt-2 tracking-tight">Delhi Wire &amp; Cable Supplier, Delivering Across India</h2>
           <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
             <p>
               Angel Cables, a unit of R K Enterprises, has manufactured electrical wires and cables at Lawrence Road Industrial Area, Delhi since 2005.
@@ -267,8 +267,8 @@ export default function HomePage() {
               <Link href="/products/telephone-cable" className="text-brand font-semibold hover:underline">telephone cable</Link>.
             </p>
             <p>
-              We deliver across Delhi, Noida, Gurugram, Faridabad and Ghaziabad, and supply dealers throughout Haryana, Uttar Pradesh, Punjab,
-              Rajasthan and Himachal Pradesh.{" "}
+              We deliver all over India — from Delhi, Noida, Gurugram, Faridabad and Ghaziabad to contractors, builders and dealers in
+              every state.{" "}
               <Link href="/contact" className="text-brand font-semibold hover:underline">Request a quote</Link> for bulk pricing.
             </p>
           </div>
