@@ -268,8 +268,8 @@ export default function HomePage() {
             </p>
             <p>
               We deliver across Delhi, Noida, Gurugram, Faridabad and Ghaziabad, and supply dealers throughout Haryana, Uttar Pradesh, Punjab,
-              Rajasthan and Himachal Pradesh. Call <a href={`tel:${PHONES[0].tel}`} className="text-brand font-semibold hover:underline">{PHONES[0].display}</a> or{" "}
-              <Link href="/contact" className="text-brand font-semibold hover:underline">request a quote</Link> for bulk pricing.
+              Rajasthan and Himachal Pradesh.{" "}
+              <Link href="/contact" className="text-brand font-semibold hover:underline">Request a quote</Link> for bulk pricing.
             </p>
           </div>
         </div>
