@@ -130,7 +130,7 @@ export const products = [
       "sizes": "1.0–6.0 sq mm",
       "standard": "IS 694"
     },
-    "image": "house-wire"
+    "image": "angel-house-wire-black"
   },
   {
     "slug": "frls-single-core-house-wire",
@@ -152,7 +152,7 @@ export const products = [
       "sizes": "1.0–6.0 sq mm",
       "standard": "IS 694"
     },
-    "image": "house-wire"
+    "image": "angel-house-wire-blue"
   },
   {
     "slug": "fr-multi-strand-flexible-house-wire",
@@ -174,7 +174,7 @@ export const products = [
       "sizes": "1.0–6.0 sq mm",
       "standard": "IS 694"
     },
-    "image": "flexible-cable"
+    "image": "angel-house-wire-yellow"
   },
   {
     "slug": "frls-multi-strand-flexible-house-wire",
@@ -196,7 +196,7 @@ export const products = [
       "sizes": "0.5–6.0 sq mm",
       "standard": "IS 694"
     },
-    "image": "house-wire"
+    "image": "angel-house-wire-black"
   },
   {
     "slug": "2-5-sq-mm-fr-copper-wire-premium",
@@ -218,7 +218,7 @@ export const products = [
       "current_rating": "23A",
       "standard": "IS 694"
     },
-    "image": "house-wire"
+    "image": "angel-house-wire-blue"
   },
   {
     "slug": "multi-core-control-flexible-cable",
@@ -350,7 +350,7 @@ export const products = [
       "jacket": "PVC flat",
       "application": "Indoor CCTV"
     },
-    "image": "cctv-cable"
+    "image": "angel-cctv-combo-cable"
   },
   {
     "slug": "1-plus-4-cctv-combo-cable",
@@ -372,7 +372,7 @@ export const products = [
       "jacket": "PVC flat",
       "application": "PTZ CCTV cameras"
     },
-    "image": "cctv-cable"
+    "image": "angel-cctv-combo-cable"
   },
   {
     "slug": "1-plus-6-cctv-combo-cable",
@@ -394,7 +394,7 @@ export const products = [
       "jacket": "PVC flat",
       "application": "Integrated security systems"
     },
-    "image": "cctv-cable"
+    "image": "angel-cctv-combo-cable"
   },
   {
     "slug": "bare-copper-wire",

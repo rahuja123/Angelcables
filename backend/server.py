@@ -186,7 +186,7 @@ PRODUCTS_DATA = [
         "category": "Electric House Wire",
         "description": "ISI-marked FR (Flame Retardant) single-core copper house wire for standard residential and commercial wiring. Pure electrolytic copper conductor with FR-PVC insulation for enhanced fire safety. Available in 1.0, 1.5, 2.5, 4.0 and 6.0 sq mm.",
         "features": ["ISI marked (IS 694)", "Pure copper conductor", "FR-PVC insulation", "Self-extinguishing", "Smooth surface finish"],
-        "image": "https://productimages.withfloats.com/actual/68e4a12956522870096e857a.png",
+        "image": "https://angelcables.com/images/angel-house-wire-black.webp",
         "specs": {"conductor": "Copper", "insulation": "FR-PVC", "voltage": "1.1 kV", "sizes": "1.0–6.0 sq mm", "standard": "IS 694"}
     },
     {
@@ -194,7 +194,7 @@ PRODUCTS_DATA = [
         "category": "Electric House Wire",
         "description": "ISI-marked FRLS (Flame Retardant Low Smoke) single-core copper house wire. Mandatory in commercial buildings, hospitals, malls and public spaces as per NBC norms. Produces minimal toxic smoke during fire. Sizes 1.0 to 6.0 sq mm.",
         "features": ["ISI marked (IS 694)", "Low smoke emission", "Halogen-free option", "NBC compliant", "Superior fire safety"],
-        "image": "https://productimages.withfloats.com/actual/68e4a12956522870096e857a.png",
+        "image": "https://angelcables.com/images/angel-house-wire-blue.webp",
         "specs": {"conductor": "Copper", "insulation": "FRLS-PVC", "voltage": "1.1 kV", "sizes": "1.0–6.0 sq mm", "standard": "IS 694"}
     },
     {
@@ -202,7 +202,7 @@ PRODUCTS_DATA = [
         "category": "Electric House Wire",
         "description": "FR multi-strand flexible copper house wire for easy installation in conduit and surface wiring. The stranded construction makes it far easier to pull through conduit compared to solid wire, with no compromise on conductivity. Sizes 1.0 to 6.0 sq mm.",
         "features": ["Multi-strand copper", "Easy conduit pulling", "FR-PVC insulation", "ISI certified", "Kink resistant"],
-        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "image": "https://angelcables.com/images/angel-house-wire-yellow.webp",
         "specs": {"conductor": "Stranded Copper", "insulation": "FR-PVC", "voltage": "1.1 kV", "sizes": "1.0–6.0 sq mm", "standard": "IS 694"}
     },
     {
@@ -210,7 +210,7 @@ PRODUCTS_DATA = [
         "category": "Electric House Wire",
         "description": "FRLS multi-strand flexible copper house wire combining easy installation with superior fire safety. Low smoke, self-extinguishing and ideal for offices, hospitals, schools and all commercial premises. Available in 0.5 sq mm to 6.0 sq mm.",
         "features": ["Low smoke & halogen", "Multi-strand flexible", "ISI marked", "Commercial grade", "Self-extinguishing"],
-        "image": "https://productimages.withfloats.com/actual/68e4a12956522870096e857a.png",
+        "image": "https://angelcables.com/images/angel-house-wire-black.webp",
         "specs": {"conductor": "Stranded Copper", "insulation": "FRLS-PVC", "voltage": "1.1 kV", "sizes": "0.5–6.0 sq mm", "standard": "IS 694"}
     },
     {
@@ -218,7 +218,7 @@ PRODUCTS_DATA = [
         "category": "Electric House Wire",
         "description": "Our best-selling 2.5 sq mm FR copper wire — the correct size for 15A power points, AC connections and kitchen circuits as per IS 3043. Pure copper conductor with FR-PVC insulation for reliable protection. The most common size ordered by contractors and builders.",
         "features": ["ISI marked", "Correct 15A circuit size", "Pure copper", "FR-PVC insulated", "High demand stock item"],
-        "image": "https://productimages.withfloats.com/actual/68e4a12956522870096e857a.png",
+        "image": "https://angelcables.com/images/angel-house-wire-blue.webp",
         "specs": {"size": "2.5 sq mm", "conductor": "Copper", "insulation": "FR-PVC", "current_rating": "23A", "standard": "IS 694"}
     },
     # ── FLEXIBLE CABLE ──────────────────────────────────────────────────────────
@@ -268,7 +268,7 @@ PRODUCTS_DATA = [
         "category": "CCTV Cables",
         "description": "1 RG-59 coaxial + 3-core power cable in a single flat jacket. Simplifies CCTV installation by carrying video signal and power supply wires together. Ideal for indoor CCTV systems with up to 12V/24V DC cameras. Eliminates double cable runs.",
         "features": ["Video + power combined", "1 coax + 3 power cores", "Easy installation", "Neat single cable run", "Indoor CCTV use"],
-        "image": "https://productimages.withfloats.com/actual/68e49f18993a511b693b1be0.png",
+        "image": "https://angelcables.com/images/angel-cctv-combo-cable.webp",
         "specs": {"coax": "RG-59 CCS", "power_cores": "3", "power_conductor": "0.5 sq mm copper", "jacket": "PVC flat", "application": "Indoor CCTV"}
     },
     {
@@ -276,7 +276,7 @@ PRODUCTS_DATA = [
         "category": "CCTV Cables",
         "description": "1 RG-59 coaxial + 4-core power cable for CCTV systems requiring PTZ (pan-tilt-zoom) control. The 4-core power section carries video, power and RS-485 control signal in one cable run. Perfect for PTZ dome cameras in commercial installations.",
         "features": ["PTZ compatible", "1 coax + 4 power cores", "RS-485 control ready", "Reduced cable clutter", "Commercial grade"],
-        "image": "https://productimages.withfloats.com/actual/68e49f18993a511b693b1be0.png",
+        "image": "https://angelcables.com/images/angel-cctv-combo-cable.webp",
         "specs": {"coax": "RG-59 CCS", "power_cores": "4", "power_conductor": "0.5 sq mm copper", "jacket": "PVC flat", "application": "PTZ CCTV cameras"}
     },
     {
@@ -284,7 +284,7 @@ PRODUCTS_DATA = [
         "category": "CCTV Cables",
         "description": "1 RG-59 coaxial + 6-core power cable for advanced CCTV and access control integration. The 6-core section supports video, power, audio, alarm relay and control signals in a single installation run. Reduces cabling complexity in large security systems.",
         "features": ["6 function cores", "Audio & alarm support", "Access control wiring", "Single run convenience", "Large system grade"],
-        "image": "https://productimages.withfloats.com/actual/68e49f18993a511b693b1be0.png",
+        "image": "https://angelcables.com/images/angel-cctv-combo-cable.webp",
         "specs": {"coax": "RG-59 CCS", "power_cores": "6", "power_conductor": "0.5 sq mm copper", "jacket": "PVC flat", "application": "Integrated security systems"}
     },
     # ── COPPER WIRE ─────────────────────────────────────────────────────────────

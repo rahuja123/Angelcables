@@ -27,6 +27,10 @@ const SOURCES = {
   "angel-cat6-cable-alt": "assets/angel-cat6-cable-alt.webp",
   "angel-telephone-cable": "assets/angel-telephone-cable.webp",
   "angel-telephone-cable-alt": "assets/angel-telephone-cable-alt.webp",
+  "angel-house-wire-blue": "assets/angel-house-wire-blue.webp",
+  "angel-house-wire-black": "assets/angel-house-wire-black.webp",
+  "angel-house-wire-yellow": "assets/angel-house-wire-yellow.webp",
+  "angel-cctv-combo-cable": "assets/angel-cctv-combo-cable.webp",
 };
 
 const OUT_DIR = path.join(process.cwd(), "public", "images");

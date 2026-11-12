@@ -47,7 +47,7 @@ export const categories = [
     metaTitle: "FR & FRLS House Wire Manufacturer in Delhi",
     metaDescription:
       "ISI-marked FR & FRLS copper house wire, 1–6 sq mm, single core and multi-strand, from a Delhi manufacturer. Bulk rates for builders and electricians.",
-    image: "house-wire",
+    image: "angel-house-wire-blue",
     intro: [
       "Angel Cables makes PVC-insulated copper house wire for residential, commercial and institutional buildings. Every coil uses pure electrolytic copper and is ISI-marked to IS 694, in FR (flame retardant) and FRLS (flame retardant, low smoke) grades.",
       "We supply both single-core and multi-strand flexible house wire in 0.5 sq mm to 6 sq mm. Multi-strand wire is easier to pull through conduit and bends without kinking, which is why most electricians in Delhi now prefer it for concealed wiring.",
@@ -125,7 +125,7 @@ export const categories = [
     metaTitle: "CCTV Cable in Delhi — RG-6 & Combo Cables",
     metaDescription:
       "RG-6 coaxial (CCS & pure copper) and 1+3, 1+4, 1+6 CCTV combo cable for HD and analog cameras. Bulk rolls for security installers across India.",
-    image: "cctv-cable",
+    image: "angel-cctv-combo-cable",
     intro: [
       "Angel Cables supplies CCTV cable for security installers, builders and system integrators across India. Our range includes RG-6 75-ohm coaxial cable in CCS (copper clad steel) and pure copper, plus combo cables that carry video and power in one jacket.",
       "1+3, 1+4 and 1+6 combo cables pair an RG-59 coaxial core with 3, 4 or 6 power cores, so each camera needs only one cable run. The extra cores carry PTZ control, audio or alarm signals in larger systems.",

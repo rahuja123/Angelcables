@@ -78,5 +78,21 @@
   "angel-telephone-cable-alt": {
     "width": 1000,
     "height": 1000
+  },
+  "angel-house-wire-blue": {
+    "width": 1000,
+    "height": 1000
+  },
+  "angel-house-wire-black": {
+    "width": 1000,
+    "height": 1000
+  },
+  "angel-house-wire-yellow": {
+    "width": 1000,
+    "height": 1000
+  },
+  "angel-cctv-combo-cable": {
+    "width": 1000,
+    "height": 1000
   }
 }
