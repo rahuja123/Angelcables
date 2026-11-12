@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "npx serve out",
     "images": "node scripts/fetch-images.mjs",
-    "audit:seo": "node scripts/audit-seo.mjs"
+    "audit:seo": "node scripts/audit-seo.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.72.0",
