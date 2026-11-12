@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import ProductBrowser from "@/components/ProductBrowser";
 import JsonLd from "@/components/JsonLd";
 import { products, categories, productPath } from "@/data/catalog";
-import { pageMetadata, absoluteUrl, API_URL } from "@/lib/site";
+import { pageMetadata, absoluteUrl } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Electrical Wires & Cables in Delhi — Full Product Range",
@@ -42,7 +42,8 @@ export default function ProductsPage() {
         title="Wires & Cables"
         aside={
           <a
-            href={`${API_URL}/api/catalog/pdf`}
+            href="/angel-cables-catalog.pdf"
+              download
             className="shrink-0 flex items-center gap-2 border border-slate-600 text-slate-300 px-5 py-2.5 text-sm font-bold hover:bg-slate-800 transition-colors uppercase tracking-wide"
           >
             <Download size={15} aria-hidden="true" /> Download Catalog (PDF)

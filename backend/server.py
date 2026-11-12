@@ -509,7 +509,7 @@ def _build_catalog_pdf(products: list) -> bytes:
             self.set_font("Helvetica", "B", 7)
             self.set_text_color(*ORANGE)
             self.set_xy(12, 3)
-            self.cell(100, 5, "ANGEL CABLES  -  Product Catalog 2025")
+            self.cell(100, 5, f"ANGEL CABLES  -  Product Catalog {datetime.now().year}")
             self.set_text_color(*MUTED)
             self.set_xy(0, 3)
             self.cell(198, 5, f"Page {self.page_no() - 1}", align="R")
@@ -531,6 +531,9 @@ def _build_catalog_pdf(products: list) -> bytes:
     pdf.set_margins(12, 14, 12)
 
     # ── COVER PAGE ──────────────────────────────────────────────
+    # Full-bleed page: turn off auto page-break so the footer line at y=280
+    # doesn't spill onto an otherwise blank second page.
+    pdf.set_auto_page_break(auto=False)
     pdf.add_page()
 
     # Full-page navy background
@@ -559,7 +562,7 @@ def _build_catalog_pdf(products: list) -> bytes:
     pdf.set_font("Helvetica", "B", 20)
     pdf.set_text_color(*WHITE)
     pdf.set_xy(0, 120)
-    pdf.cell(210, 10, "PRODUCT CATALOG 2025", align="C")
+    pdf.cell(210, 10, f"PRODUCT CATALOG {datetime.now().year}", align="C")
 
     # Stats row
     stats = [
@@ -603,19 +606,22 @@ def _build_catalog_pdf(products: list) -> bytes:
     TEXT_X = 57
     TEXT_W = 140
 
+    pdf.set_auto_page_break(auto=True, margin=16)
+
     for cat_name, cat_products in categories.items():
         pdf.add_page()
 
-        # Category heading
+        # Category heading: move below the text before drawing the rule, so
+        # neither the underline nor the first product card overlaps it.
         pdf.set_font("Helvetica", "B", 16)
         pdf.set_text_color(*ORANGE)
-        pdf.set_xy(12, pdf.get_y())
-        pdf.cell(0, 9, cat_name.upper())
+        pdf.set_xy(12, pdf.get_y() + 2)
+        pdf.cell(0, 9, cat_name.upper(), new_x="LMARGIN", new_y="NEXT")
         pdf.set_draw_color(*ORANGE)
         pdf.set_line_width(0.4)
         y_line = pdf.get_y() + 0.5
         pdf.line(12, y_line, 198, y_line)
-        pdf.ln(5)
+        pdf.set_y(y_line + 4)
 
         for product in cat_products:
             if pdf.get_y() > 262:
@@ -697,7 +703,7 @@ async def download_catalog_pdf():
     return StreamingResponse(
         BytesIO(pdf_bytes),
         media_type="application/pdf",
-        headers={"Content-Disposition": 'attachment; filename="angel-cables-catalog-2025.pdf"'},
+        headers={"Content-Disposition": 'attachment; filename="angel-cables-catalog.pdf"'},
     )
 
 @api_router.post("/dealer-enquiry")

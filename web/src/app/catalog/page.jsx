@@ -5,7 +5,7 @@ import PageHeader from "@/components/PageHeader";
 import PrintButton from "@/components/PrintButton";
 import Img from "@/components/Img";
 import { products, categories, productsInCategory, productPath } from "@/data/catalog";
-import { pageMetadata, API_URL, PHONES } from "@/lib/site";
+import { pageMetadata, PHONES } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Product Catalog — Download PDF",
@@ -30,7 +30,8 @@ export default function CatalogPage() {
               <ArrowLeft size={15} aria-hidden="true" /> Products
             </Link>
             <a
-              href={`${API_URL}/api/catalog/pdf`}
+              href="/angel-cables-catalog.pdf"
+              download
               className="flex items-center gap-2 bg-brand text-white px-5 py-2.5 text-sm font-bold uppercase tracking-wide hover:bg-orange-700 transition-colors"
             >
               <FileDown size={15} aria-hidden="true" /> Download PDF
