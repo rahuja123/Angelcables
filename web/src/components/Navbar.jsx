@@ -82,12 +82,8 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
-            <Link href="/" className="flex items-center gap-3">
-              <img src="/logo.webp" alt="" width={360} height={120} className="h-10 md:h-12 w-auto" />
-              <span className="leading-none">
-                <span className="text-lg md:text-xl font-black text-navy tracking-tight block font-display">ANGEL CABLES</span>
-                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-400 hidden sm:block">Precision & Safety</span>
-              </span>
+            <Link href="/" className="flex items-center">
+              <img src="/logo.webp" alt="Angel Cables — home" width={360} height={120} className="h-11 md:h-14 w-auto" />
             </Link>
 
             {/* Desktop links */}

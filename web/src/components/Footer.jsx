@@ -36,12 +36,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <img src="/logo.webp" alt="" width={360} height={120} loading="lazy" className="h-8 w-auto shrink-0" />
-              <span>
-                <span className="text-xl font-black tracking-tight block font-display">ANGEL CABLES</span>
-                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-400">Since 2005</span>
-              </span>
+            <Link href="/" className="inline-block mb-6">
+              <img src="/logo.webp" alt="Angel Cables — home" width={360} height={120} loading="lazy" className="h-12 w-auto" />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
               ISI-certified wire and cable manufacturer in Delhi. Trusted by contractors, builders, dealers and industries across India.

@@ -46,10 +46,7 @@ export default function CatalogPage() {
         <div className="hidden print:flex items-center justify-between border-b-2 border-brand pb-6 mb-10">
           <div className="flex items-center gap-4">
             <img src="/logo.webp" alt="Angel Cables" width={360} height={120} className="h-14 w-auto" />
-            <div>
-              <div className="text-2xl font-black tracking-tight font-display">ANGEL CABLES</div>
-              <div className="text-xs font-mono uppercase tracking-widest text-slate-500">A Unit of R K Enterprises · Est. 2005</div>
-            </div>
+            <div className="text-xs font-mono uppercase tracking-widest text-slate-500">A Unit of R K Enterprises · Est. 2005</div>
           </div>
           <div className="text-right text-xs text-slate-500">
             <div>B-70/32, DSIDC, Lawrence Road Industrial Area</div>
