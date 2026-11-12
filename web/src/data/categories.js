@@ -8,7 +8,7 @@ export const categories = [
     metaTitle: "Armoured Cable Manufacturer & Supplier in Delhi",
     metaDescription:
       "ISI-certified aluminium & copper armoured cable, 2, 3.5 & 4 core, 1.5–300 sq mm, direct from our Delhi factory. Bulk rates. Call +91 9810011248.",
-    image: "armoured-cable",
+    image: "angel-armoured-4-core-copper",
     intro: [
       "Angel Cables manufactures steel wire armoured (SWA) power cables at our factory in Lawrence Road Industrial Area, Delhi. Our armoured range covers 2 core, 3.5 core and 4 core cables with aluminium or copper conductors in sizes from 1.5 sq mm to 300 sq mm, rated for 1.1 kV and built to IS 1554.",
       "Armoured cable is the right choice wherever a cable runs underground, outdoors, along cable trays in factories, or anywhere it can be crushed, cut or chewed by rodents. The galvanised steel wire layer takes the mechanical load, so the insulated cores inside keep working safely for decades.",
@@ -91,7 +91,7 @@ export const categories = [
     metaTitle: "Flexible & Control Cable Supplier in Delhi",
     metaDescription:
       "Multi-core flexible copper cable, two-core appliance cable and shielded control cable for panels, CNC machines and PLCs. Delhi supplier, bulk pricing.",
-    image: "flexible-cable",
+    image: "angel-flexible-2-core",
     intro: [
       "Our flexible cables use finely stranded copper conductors so they bend repeatedly without cracking. The range covers two-core cables for appliances and extension leads, multi-core control cables (2 to 24 cores) for panels and machines, and shielded control cables for signal-sensitive equipment.",
       "Shielded flexible cable has a copper braid screen that blocks electrical noise from motors and variable frequency drives, keeping PLC, sensor and CNC signals clean. It is the cable panel builders and automation engineers across India specify for control wiring.",
@@ -160,7 +160,7 @@ export const categories = [
     metaTitle: "Submersible Pump Cable Manufacturer in Delhi",
     metaDescription:
       "ISI-marked flat submersible cable for single and three-phase borewell pumps: 1.5, 2.5, 4 and 6 sq mm. Factory-direct from Delhi for dealers and farmers.",
-    image: "submersible-cable",
+    image: "angel-submersible-flat-3-core",
     intro: [
       "Submersible cable powers pumps that sit deep inside borewells and water tanks, so it must stay fully waterproof for years under pressure. Angel Cables makes flat submersible cables with pure copper conductors and special water-resistant PVC insulation, ISI-marked to IS 694.",
       "We supply single-phase cable in 1.5 and 2.5 sq mm for domestic pumps up to about 2 HP, and three-phase cable in 4 and 6 sq mm for agricultural and commercial pumps up to 15 HP. Choosing the right size depends on pump power and borewell depth — undersized cable overheats and burns pump windings.",
@@ -194,7 +194,7 @@ export const categories = [
     metaTitle: "Copper Wire & Earthing Wire Supplier in Delhi",
     metaDescription:
       "99.9% pure bare copper wire, tinned copper wire and EC-grade copper earthing wire from 0.5 to 50 sq mm. Supplier to panel builders and electricians in Delhi.",
-    image: "copper-armoured-cable",
+    image: "angel-bare-copper-wire",
     intro: [
       "We supply high-conductivity electrolytic copper wire for earthing, panel wiring and manufacturing. The range includes bare copper wire, tinned copper wire for humid and marine conditions, and EC-grade copper earthing wire for grounding installations to IS 3043.",
       "Good earthing is the most important safety feature in any electrical installation. A low-resistance copper earth path makes MCBs and RCCBs trip quickly during a fault, protecting people and appliances.",
@@ -224,7 +224,7 @@ export const categories = [
     metaTitle: "CAT6 LAN Cable Supplier in Delhi — 305m Box",
     metaDescription:
       "CAT6 UTP LAN cable in 305 m and 90 m boxes, outdoor armoured CAT6 and CAT5e cable for offices, CCTV and networking. Bulk supply across India.",
-    image: "flexible-cable",
+    image: "angel-cat6-cable",
     intro: [
       "Angel Cables supplies structured networking cable for offices, schools, hospitals, housing societies and IP CCTV projects. Our CAT6 UTP cable uses 23 AWG solid copper conductors with 250 MHz bandwidth for reliable Gigabit Ethernet.",
       "CAT6 is available in full 305 metre pull boxes for large installations and 90 metre boxes for homes and small offices. For runs between buildings or underground, our outdoor armoured CAT6 has steel wire armour and a UV-resistant jacket. CAT5e remains a budget option for 100 Mbps networks, IP phones and access control.",
@@ -258,7 +258,7 @@ export const categories = [
     metaTitle: "Telephone & EPABX Cable Supplier in Delhi",
     metaDescription:
       "TCBC telephone wire, 2 pair, 4 pair and 10/20 pair telephone cables for EPABX, intercom and building riser wiring. Supplier in Delhi with bulk pricing.",
-    image: "flexible-cable",
+    image: "angel-telephone-cable",
     intro: [
       "Telephone and intercom systems still run the front desks, offices and housing societies of Delhi. Angel Cables supplies twisted pair telephone cable for every part of these systems, from TCBC extension wire to 10 and 20 pair riser cables.",
       "Twisted pairs cancel interference between lines, so calls stay clear even when many extensions share one cable. Colour-coded pairs make termination at the MDF, IDF and EPABX quick and error-free.",

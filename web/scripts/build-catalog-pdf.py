@@ -21,6 +21,7 @@ import requests
 ROOT = Path(__file__).resolve().parent.parent
 SERVER = ROOT.parent / "backend" / "server.py"
 OUT = ROOT / "public" / "angel-cables-catalog.pdf"
+SITE_IMAGES = "https://angelcables.com/images/"
 
 WANTED = {"_PDF_CHAR_MAP", "_pdf_safe", "_fetch_image", "_build_catalog_pdf", "_draw_placeholder", "PRODUCTS_DATA"}
 
@@ -34,6 +35,25 @@ def main() -> None:
     ]
     ns = {"datetime": datetime, "BytesIO": BytesIO, "Optional": Optional, "req_lib": requests}
     exec(compile(ast.Module(body=nodes, type_ignores=[]), str(SERVER), "exec"), ns)
+
+    # Site-hosted product photos are read from this build's public/images
+    # (480px versions) so the PDF never depends on what is currently deployed.
+    remote_fetch = ns["_fetch_image"]
+
+    def fetch_image(url):
+        if url.startswith(SITE_IMAGES):
+            local = ROOT / "public" / "images" / f"{Path(url).stem}-480.webp"
+            if not local.exists():
+                return None
+            # FPDF stores WebP losslessly (~4x bigger); JPEG is embedded as-is.
+            from PIL import Image
+            out = BytesIO()
+            Image.open(local).convert("RGB").save(out, "JPEG", quality=80)
+            out.seek(0)
+            return out
+        return remote_fetch(url)
+
+    ns["_fetch_image"] = fetch_image
 
     pdf = ns["_build_catalog_pdf"](ns["PRODUCTS_DATA"])
     OUT.write_bytes(pdf)

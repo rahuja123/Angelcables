@@ -108,7 +108,7 @@ export const products = [
       "sizes": "1.5–300 sq mm",
       "standard": "IS 1554 Part 1"
     },
-    "image": "armoured-cable"
+    "image": "angel-armoured-4-core-copper"
   },
   {
     "slug": "fr-single-core-house-wire",
@@ -262,7 +262,7 @@ export const products = [
       "sizes": "0.75–1.5 sq mm",
       "application": "Appliances"
     },
-    "image": "flexible-cable"
+    "image": "angel-flexible-2-core"
   },
   {
     "slug": "shielded-control-flexible-cable",
@@ -416,7 +416,7 @@ export const products = [
       "application": "Earthing, connections",
       "standard": "IS 8130"
     },
-    "image": "copper-armoured-cable"
+    "image": "angel-bare-copper-wire"
   },
   {
     "slug": "tinned-copper-wire",
@@ -438,7 +438,7 @@ export const products = [
       "application": "Marine, humid environments",
       "standard": "IS 8130"
     },
-    "image": "copper-armoured-cable"
+    "image": "angel-bare-copper-wire"
   },
   {
     "slug": "copper-earthing-wire-ec-grade",
@@ -460,7 +460,7 @@ export const products = [
       "application": "Earthing & grounding",
       "standard": "IS 3043 / IS 8130"
     },
-    "image": "copper-armoured-cable"
+    "image": "angel-bare-copper-wire"
   },
   {
     "slug": "1-5-sq-mm-single-phase-submersible-cable",
@@ -482,7 +482,7 @@ export const products = [
       "pump_rating": "0.5–1 HP",
       "standard": "IS 694"
     },
-    "image": "submersible-cable"
+    "image": "angel-submersible-flat-3-core"
   },
   {
     "slug": "2-5-sq-mm-single-phase-submersible-cable",
@@ -504,7 +504,7 @@ export const products = [
       "pump_rating": "1–2 HP",
       "standard": "IS 694"
     },
-    "image": "submersible-cable"
+    "image": "angel-submersible-flat-3-core"
   },
   {
     "slug": "4-sq-mm-three-phase-submersible-cable",
@@ -526,7 +526,7 @@ export const products = [
       "pump_rating": "3–7.5 HP",
       "standard": "IS 694"
     },
-    "image": "submersible-cable"
+    "image": "angel-submersible-flat-3-core"
   },
   {
     "slug": "6-sq-mm-three-phase-submersible-cable",
@@ -548,7 +548,7 @@ export const products = [
       "pump_rating": "7.5–15 HP",
       "standard": "IS 694"
     },
-    "image": "submersible-cable"
+    "image": "angel-submersible-flat-3-core"
   },
   {
     "slug": "cat6-utp-cable-305mtr-box",
@@ -570,7 +570,7 @@ export const products = [
       "length": "305 metres",
       "application": "Gigabit LAN, structured cabling"
     },
-    "image": "flexible-cable"
+    "image": "angel-cat6-cable"
   },
   {
     "slug": "cat6-utp-cable-90mtr-box",
@@ -592,7 +592,7 @@ export const products = [
       "length": "90 metres",
       "application": "Home, retail, small office"
     },
-    "image": "flexible-cable"
+    "image": "angel-cat6-cable"
   },
   {
     "slug": "cat6-outdoor-armoured-lan-cable",
@@ -614,7 +614,7 @@ export const products = [
       "conductor": "23 AWG solid copper",
       "application": "Outdoor, underground, campus"
     },
-    "image": "armoured-cable"
+    "image": "angel-cat6-cable"
   },
   {
     "slug": "cat5e-utp-cable-305mtr-box",
@@ -636,7 +636,7 @@ export const products = [
       "length": "305 metres",
       "application": "100Mbps–1Gbps Ethernet"
     },
-    "image": "flexible-cable"
+    "image": "angel-cat6-cable-alt"
   },
   {
     "slug": "tcbc-telephone-wire-twisted-pair",
@@ -658,7 +658,7 @@ export const products = [
       "insulation": "PVC",
       "standard": "IS 6239"
     },
-    "image": "flexible-cable"
+    "image": "angel-telephone-cable-alt"
   },
   {
     "slug": "2-pair-telephone-cable",
@@ -680,7 +680,7 @@ export const products = [
       "application": "Telephone, intercom, doorphone",
       "standard": "IS 6239"
     },
-    "image": "flexible-cable"
+    "image": "angel-telephone-cable"
   },
   {
     "slug": "4-pair-telephone-cable",
@@ -702,7 +702,7 @@ export const products = [
       "application": "EPABX, multi-line office",
       "standard": "IS 6239"
     },
-    "image": "flexible-cable"
+    "image": "angel-telephone-cable"
   },
   {
     "slug": "multi-pair-telephone-cable-10-20-pair",
@@ -724,6 +724,6 @@ export const products = [
       "application": "Building riser, MDF/IDF",
       "standard": "IS 6239"
     },
-    "image": "flexible-cable"
+    "image": "angel-telephone-cable"
   }
 ];

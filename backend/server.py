@@ -177,7 +177,7 @@ PRODUCTS_DATA = [
         "category": "Armoured Cable",
         "description": "4-core copper armoured cable for the most demanding power distribution applications. Used in high-rise buildings, industrial plants and infrastructure projects where copper conductors are specified. Sizes 1.5 sq mm to 300 sq mm.",
         "features": ["Copper conductor", "4-core design", "SWA armoured", "PVC/XLPE insulation", "High mechanical strength"],
-        "image": "https://productimages.withfloats.com/actual/68e49c9aed06f3bbb445df55.jpg",
+        "image": "https://angelcables.com/images/angel-armoured-4-core-copper.webp",
         "specs": {"conductor": "Copper", "cores": "4", "voltage": "1.1 kV", "sizes": "1.5–300 sq mm", "standard": "IS 1554 Part 1"}
     },
     # ── ELECTRIC HOUSE WIRE ─────────────────────────────────────────────────────
@@ -235,7 +235,7 @@ PRODUCTS_DATA = [
         "category": "Flexible Cable",
         "description": "Two-core flexible copper cable for domestic appliances, extension cords and light commercial equipment. Available in 0.75, 1.0 and 1.5 sq mm. Easy to work with, highly flexible and reliably insulated.",
         "features": ["Appliance grade", "PVC insulated", "Easy termination", "Kink resistant", "RoHS compliant"],
-        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "image": "https://angelcables.com/images/angel-flexible-2-core.webp",
         "specs": {"conductor": "Copper", "cores": "2", "voltage": "300/500V", "sizes": "0.75–1.5 sq mm", "application": "Appliances"}
     },
     {
@@ -293,7 +293,7 @@ PRODUCTS_DATA = [
         "category": "Copper Wire",
         "description": "High purity bare copper wire for earthing, electrical connections and conductor manufacturing. 99.9% electrolytic grade copper. Available in round and bunched stranded forms from 0.5 sq mm to 50 sq mm. Used extensively by panel builders, transformer manufacturers and electricians.",
         "features": ["99.9% pure copper", "Excellent conductivity", "Earthing applications", "Round & stranded", "Low resistance"],
-        "image": "https://productimages.withfloats.com/actual/68e49a12b575d00c5aa771b6.jpg",
+        "image": "https://angelcables.com/images/angel-bare-copper-wire.webp",
         "specs": {"purity": "99.9% electrolytic", "sizes": "0.5–50 sq mm", "type": "Bare / uncoated", "application": "Earthing, connections", "standard": "IS 8130"}
     },
     {
@@ -301,7 +301,7 @@ PRODUCTS_DATA = [
         "category": "Copper Wire",
         "description": "Electrolytic copper wire with a uniform tin coating for superior corrosion resistance and solderability. Used in marine wiring, humid environments and wherever soldering is required. The tin coat prevents oxidation and ensures reliable long-term connections. Sizes 0.5 to 50 sq mm.",
         "features": ["Tin coated", "Corrosion resistant", "Easy soldering", "Marine grade", "Anti-oxidation"],
-        "image": "https://productimages.withfloats.com/actual/68e49a12b575d00c5aa771b6.jpg",
+        "image": "https://angelcables.com/images/angel-bare-copper-wire.webp",
         "specs": {"coating": "Tin", "base": "Electrolytic copper", "sizes": "0.5–50 sq mm", "application": "Marine, humid environments", "standard": "IS 8130"}
     },
     {
@@ -309,7 +309,7 @@ PRODUCTS_DATA = [
         "category": "Copper Wire",
         "description": "EC (Electrical Conductivity) grade copper earthing wire for proper grounding of electrical installations as per IS 3043. Available in solid and stranded construction. Ensures low impedance earth path to protect personnel and equipment from fault currents.",
         "features": ["EC grade copper", "IS 3043 compliant", "Solid & stranded", "Low earth resistance", "Safety critical"],
-        "image": "https://productimages.withfloats.com/actual/68e49a12b575d00c5aa771b6.jpg",
+        "image": "https://angelcables.com/images/angel-bare-copper-wire.webp",
         "specs": {"grade": "EC (Electrical Conductivity)", "sizes": "1.5–50 sq mm", "type": "Solid / Stranded", "application": "Earthing & grounding", "standard": "IS 3043 / IS 8130"}
     },
     # ── SUBMERSIBLE CABLE ───────────────────────────────────────────────────────
@@ -318,7 +318,7 @@ PRODUCTS_DATA = [
         "category": "Submersible Cable",
         "description": "1.5 sq mm single-phase (2-core) submersible pump cable for ½ HP to 1 HP domestic borewell pumps. Special waterproof PVC insulation rated for continuous submersion. Resists groundwater chemicals, motor oil and UV radiation at surface. ISI marked.",
         "features": ["ISI marked", "Waterproof PVC", "1/2–1 HP pump rated", "Chemical resistant", "Borewell grade"],
-        "image": "https://fpimages.withfloats.com/actual/68e60002327a323aaf2eb218.png",
+        "image": "https://angelcables.com/images/angel-submersible-flat-3-core.webp",
         "specs": {"size": "1.5 sq mm", "cores": "2 (single phase)", "voltage": "300/500V", "pump_rating": "0.5–1 HP", "standard": "IS 694"}
     },
     {
@@ -326,7 +326,7 @@ PRODUCTS_DATA = [
         "category": "Submersible Cable",
         "description": "2.5 sq mm single-phase submersible cable for 1 HP to 2 HP borewell and water well pumps. Most popular size for domestic borewells up to 150 feet depth. Waterproof construction with heavy duty outer jacket for long-term underground and underwater use.",
         "features": ["ISI marked", "Most popular domestic size", "1–2 HP rating", "Heavy duty jacket", "UV + chemical resistant"],
-        "image": "https://fpimages.withfloats.com/actual/68e60002327a323aaf2eb218.png",
+        "image": "https://angelcables.com/images/angel-submersible-flat-3-core.webp",
         "specs": {"size": "2.5 sq mm", "cores": "2 (single phase)", "voltage": "300/500V", "pump_rating": "1–2 HP", "standard": "IS 694"}
     },
     {
@@ -334,7 +334,7 @@ PRODUCTS_DATA = [
         "category": "Submersible Cable",
         "description": "4 sq mm 3-core three-phase submersible cable for 3 HP to 7.5 HP agricultural and industrial pumps. Essential for deep borewells beyond 200 feet and high-capacity water supply systems. Reinforced waterproof jacket withstands high pressure and continuous immersion.",
         "features": ["Three-phase 3-core", "3–7.5 HP rating", "Deep borewell rated", "Reinforced jacket", "Agriculture grade"],
-        "image": "https://fpimages.withfloats.com/actual/68e60002327a323aaf2eb218.png",
+        "image": "https://angelcables.com/images/angel-submersible-flat-3-core.webp",
         "specs": {"size": "4 sq mm", "cores": "3 (three phase)", "voltage": "415V", "pump_rating": "3–7.5 HP", "standard": "IS 694"}
     },
     {
@@ -342,7 +342,7 @@ PRODUCTS_DATA = [
         "category": "Submersible Cable",
         "description": "6 sq mm 3-core three-phase submersible cable for high-capacity 7.5 HP to 15 HP pumps used in deep borewells, irrigation systems and commercial water supply. Thick waterproof PVC insulation ensures safe operation at depths exceeding 300 feet.",
         "features": ["High HP rating", "7.5–15 HP capacity", "Deep well 300ft+", "Extra thick insulation", "Industrial grade"],
-        "image": "https://fpimages.withfloats.com/actual/68e60002327a323aaf2eb218.png",
+        "image": "https://angelcables.com/images/angel-submersible-flat-3-core.webp",
         "specs": {"size": "6 sq mm", "cores": "3 (three phase)", "voltage": "415V", "pump_rating": "7.5–15 HP", "standard": "IS 694"}
     },
     # ── CAT6 & LAN CABLES ───────────────────────────────────────────────────────
@@ -351,7 +351,7 @@ PRODUCTS_DATA = [
         "category": "CAT6 & LAN Cables",
         "description": "CAT6 unshielded twisted pair (UTP) LAN cable in a full 305-metre pull box for network installations. Supports Gigabit Ethernet (1000BASE-T) and 10-Gigabit Ethernet up to 37m (10GBASE-T). 23 AWG solid copper conductors, 250 MHz bandwidth. Ideal for structured cabling of office buildings, server rooms and residential complexes.",
         "features": ["Gigabit Ethernet ready", "250 MHz bandwidth", "23 AWG solid copper", "Full 305mtr box", "EIA/TIA 568-C.2 compliant"],
-        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "image": "https://angelcables.com/images/angel-cat6-cable.webp",
         "specs": {"standard": "CAT6 / EIA-568-C.2", "conductors": "4 pairs / 23 AWG", "bandwidth": "250 MHz", "length": "305 metres", "application": "Gigabit LAN, structured cabling"}
     },
     {
@@ -359,7 +359,7 @@ PRODUCTS_DATA = [
         "category": "CAT6 & LAN Cables",
         "description": "CAT6 UTP cable in a convenient 90-metre box for smaller installations — single floors, retail shops, small offices and home networks. Same high-quality 23 AWG solid copper with 250 MHz performance as the 305mtr roll, in an easy-to-handle pack size.",
         "features": ["Compact 90mtr pack", "Gigabit compatible", "23 AWG copper", "Easy to handle", "Home & small office"],
-        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "image": "https://angelcables.com/images/angel-cat6-cable.webp",
         "specs": {"standard": "CAT6 / EIA-568-C.2", "conductors": "4 pairs / 23 AWG", "bandwidth": "250 MHz", "length": "90 metres", "application": "Home, retail, small office"}
     },
     {
@@ -367,7 +367,7 @@ PRODUCTS_DATA = [
         "category": "CAT6 & LAN Cables",
         "description": "CAT6 armoured LAN cable for outdoor, underground and long-distance campus network runs. Steel wire armour provides rodent and mechanical protection while the UV-stabilised PE outer jacket handles direct burial. Bridges buildings, connects outdoor equipment and spans campuses without conduit in many cases.",
         "features": ["Direct burial rated", "Steel wire armour", "UV-resistant PE jacket", "Rodent proof", "Campus networking"],
-        "image": "https://productimages.withfloats.com/actual/68e49c9aed06f3bbb445df55.jpg",
+        "image": "https://angelcables.com/images/angel-cat6-cable.webp",
         "specs": {"standard": "CAT6", "armour": "Steel wire (SWA)", "jacket": "UV-stabilised PE", "conductor": "23 AWG solid copper", "application": "Outdoor, underground, campus"}
     },
     {
@@ -375,7 +375,7 @@ PRODUCTS_DATA = [
         "category": "CAT6 & LAN Cables",
         "description": "CAT5e UTP cable in a 305-metre box — the most economical choice for 100 Mbps Fast Ethernet and basic Gigabit networks. Suitable for budget-conscious projects, CCTV network backbones, IP phone systems and access control wiring where CAT6 performance is not required.",
         "features": ["Fast Ethernet ready", "Budget friendly", "305mtr full box", "24 AWG copper", "CCTV & IP phone wiring"],
-        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "image": "https://angelcables.com/images/angel-cat6-cable-alt.webp",
         "specs": {"standard": "CAT5e / EIA-568-B.2", "conductors": "4 pairs / 24 AWG", "bandwidth": "100 MHz", "length": "305 metres", "application": "100Mbps–1Gbps Ethernet"}
     },
     # ── TELEPHONE & COMMUNICATION CABLE ────────────────────────────────────────
@@ -384,7 +384,7 @@ PRODUCTS_DATA = [
         "category": "Telephone & Communication Cable",
         "description": "Tinned Copper Braided Conductor (TCBC) telephone wire — the standard internal telephone wiring cable for EPABX systems, intercom networks and telephone extensions in Indian offices and residential complexes. Twisted pair construction minimises crosstalk and interference between lines.",
         "features": ["Twisted pair construction", "Tinned copper conductor", "EPABX compatible", "Low crosstalk", "ISI compliant"],
-        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "image": "https://angelcables.com/images/angel-telephone-cable-alt.webp",
         "specs": {"conductor": "Tinned Copper", "type": "Twisted pair", "application": "EPABX, telephone extension", "insulation": "PVC", "standard": "IS 6239"}
     },
     {
@@ -392,7 +392,7 @@ PRODUCTS_DATA = [
         "category": "Telephone & Communication Cable",
         "description": "2-pair (4-wire) telephone cable for single telephone line with spare pair. Used for last-mile telephone connections, door-phone wiring and basic intercom systems. Twisted pair construction for noise immunity. Available in indoor and outdoor variants.",
         "features": ["2 twisted pairs", "1 line + 1 spare", "Low attenuation", "Doorphone wiring", "Intercom ready"],
-        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "image": "https://angelcables.com/images/angel-telephone-cable.webp",
         "specs": {"pairs": "2 (4 wires)", "conductor": "0.5mm copper", "insulation": "PVC colour coded", "application": "Telephone, intercom, doorphone", "standard": "IS 6239"}
     },
     {
@@ -400,7 +400,7 @@ PRODUCTS_DATA = [
         "category": "Telephone & Communication Cable",
         "description": "4-pair (8-wire) telephone cable for multi-line telephone systems and EPABX distribution. Supports up to 4 independent telephone or intercom lines in one cable run. Standard for office EPABX wiring from distribution box to individual workstations.",
         "features": ["4 twisted pairs", "EPABX distribution", "4 independent lines", "Colour coded pairs", "Office grade"],
-        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "image": "https://angelcables.com/images/angel-telephone-cable.webp",
         "specs": {"pairs": "4 (8 wires)", "conductor": "0.5mm copper", "insulation": "PVC colour coded", "application": "EPABX, multi-line office", "standard": "IS 6239"}
     },
     {
@@ -408,7 +408,7 @@ PRODUCTS_DATA = [
         "category": "Telephone & Communication Cable",
         "description": "Multi-pair telephone distribution cable in 10-pair and 20-pair configurations for building riser cables and main distribution frames (MDF). Connects the telephone exchange or EPABX main unit to floor-level distribution boxes. Essential for structured telephone cabling in large offices, hotels and commercial buildings.",
         "features": ["10 or 20 pairs", "Riser / backbone cable", "MDF to IDF runs", "Colour coded pairs", "High pair count"],
-        "image": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
+        "image": "https://angelcables.com/images/angel-telephone-cable.webp",
         "specs": {"pairs": "10 or 20 pairs", "conductor": "0.5mm copper", "insulation": "PVC", "application": "Building riser, MDF/IDF", "standard": "IS 6239"}
     },
 ]
@@ -640,7 +640,7 @@ def _build_catalog_pdf(products: list) -> bytes:
             img = _fetch_image(product.get("image", ""))
             if img:
                 try:
-                    pdf.image(img, x=14, y=top + 3, w=IMG_W, h=IMG_H)
+                    pdf.image(img, x=14, y=top + 3, w=IMG_W, h=IMG_H, keep_aspect_ratio=True)
                 except Exception:
                     _draw_placeholder(pdf, 14, top + 3, IMG_W, IMG_H)
             else:

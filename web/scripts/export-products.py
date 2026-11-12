@@ -27,6 +27,8 @@ CATEGORY_SLUGS = {
     "Telephone & Communication Cable": "telephone-cable",
 }
 
+SITE_IMAGES = "https://angelcables.com/images/"
+
 # Remote source image id -> local WebP basename (see scripts/fetch-images.mjs)
 IMAGE_NAMES = {
     "68e49c9aed06f3bbb445df55": "armoured-cable",
@@ -62,7 +64,14 @@ def main() -> None:
             raise SystemExit(f"Duplicate slug: {slug}")
         seen.add(slug)
         image_id = Path(p["image"]).stem
-        if image_id not in IMAGE_NAMES:
+        if p["image"].startswith(SITE_IMAGES):
+            # Already a site-hosted image: https://angelcables.com/images/<name>.webp
+            local_name = image_id
+            if not (ROOT / "public" / "images" / f"{local_name}.webp").exists():
+                raise SystemExit(f"{p['name']}: public/images/{local_name}.webp missing — run `npm run images`")
+        elif image_id in IMAGE_NAMES:
+            local_name = IMAGE_NAMES[image_id]
+        else:
             raise SystemExit(f"No local image for {p['name']} ({p['image']}) — add it to fetch-images.mjs and IMAGE_NAMES")
         products.append({
             "slug": slug,
@@ -72,7 +81,7 @@ def main() -> None:
             "description": p["description"],
             "features": p["features"],
             "specs": p["specs"],
-            "image": IMAGE_NAMES[image_id],
+            "image": local_name,
         })
 
     OUT.write_text(

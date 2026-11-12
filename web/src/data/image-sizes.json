@@ -46,5 +46,37 @@
   "angel-product-range": {
     "width": 1000,
     "height": 563
+  },
+  "angel-armoured-4-core-copper": {
+    "width": 1000,
+    "height": 1000
+  },
+  "angel-flexible-2-core": {
+    "width": 1000,
+    "height": 1000
+  },
+  "angel-bare-copper-wire": {
+    "width": 1000,
+    "height": 1000
+  },
+  "angel-submersible-flat-3-core": {
+    "width": 1000,
+    "height": 1000
+  },
+  "angel-cat6-cable": {
+    "width": 1000,
+    "height": 1000
+  },
+  "angel-cat6-cable-alt": {
+    "width": 1000,
+    "height": 1000
+  },
+  "angel-telephone-cable": {
+    "width": 1000,
+    "height": 1000
+  },
+  "angel-telephone-cable-alt": {
+    "width": 1000,
+    "height": 1000
   }
 }

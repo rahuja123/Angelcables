@@ -19,6 +19,14 @@ const SOURCES = {
   "cable-stock": "https://fpimages.withfloats.com/actual/68e600010404a0aef863739c.jpg",
   // Local originals (paths relative to web/)
   "angel-product-range": "assets/angel-product-range.webp",
+  "angel-armoured-4-core-copper": "assets/angel-armoured-4-core-copper.webp",
+  "angel-flexible-2-core": "assets/angel-flexible-2-core.webp",
+  "angel-bare-copper-wire": "assets/angel-bare-copper-wire.webp",
+  "angel-submersible-flat-3-core": "assets/angel-submersible-flat-3-core.webp",
+  "angel-cat6-cable": "assets/angel-cat6-cable.webp",
+  "angel-cat6-cable-alt": "assets/angel-cat6-cable-alt.webp",
+  "angel-telephone-cable": "assets/angel-telephone-cable.webp",
+  "angel-telephone-cable-alt": "assets/angel-telephone-cable-alt.webp",
 };
 
 const OUT_DIR = path.join(process.cwd(), "public", "images");
