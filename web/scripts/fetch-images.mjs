@@ -2,7 +2,7 @@
 // Output: public/images/<name>.webp (1000px) and public/images/<name>-480.webp (cards).
 // Re-run with `npm run images` whenever a source image changes.
 import sharp from "sharp";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const SOURCES = {
@@ -17,7 +17,8 @@ const SOURCES = {
   "factory-floor": "https://fpimages.withfloats.com/actual/68b915ab3266bc661dcc5cf9.jpg",
   "factory-products": "https://fpimages.withfloats.com/actual/68b915aa6419ae333fe058c5.jpg",
   "cable-stock": "https://fpimages.withfloats.com/actual/68e600010404a0aef863739c.jpg",
-  "manufacturing-facility": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=85&w=1600&auto=format&fit=crop",
+  // Local originals (paths relative to web/)
+  "angel-product-range": "assets/angel-product-range.webp",
 };
 
 const OUT_DIR = path.join(process.cwd(), "public", "images");
@@ -25,9 +26,14 @@ await mkdir(OUT_DIR, { recursive: true });
 
 const manifest = {};
 for (const [name, url] of Object.entries(SOURCES)) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`${name}: HTTP ${res.status} for ${url}`);
-  const input = Buffer.from(await res.arrayBuffer());
+  let input;
+  if (/^https?:\/\//.test(url)) {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`${name}: HTTP ${res.status} for ${url}`);
+    input = Buffer.from(await res.arrayBuffer());
+  } else {
+    input = await readFile(path.join(process.cwd(), url));
+  }
   const meta = await sharp(input).metadata();
 
   for (const [suffix, width] of [["", 1000], ["-480", 480]]) {

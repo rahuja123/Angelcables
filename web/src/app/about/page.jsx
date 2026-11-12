@@ -68,10 +68,10 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="relative">
-            <div className="aspect-[4/3] bg-slate-100 overflow-hidden border border-slate-200">
+            <div className="aspect-[16/9] bg-navy overflow-hidden border border-slate-200">
               <Img
-                name="manufacturing-facility"
-                alt="Industrial manufacturing facility"
+                name="angel-product-range"
+                alt="Angel Cables ISI-marked double-layer PVC house wire coils, retail box and CCTV cable rolls"
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 priority
                 className="w-full h-full object-cover"
