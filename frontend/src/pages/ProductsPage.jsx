@@ -30,22 +30,29 @@ export default function ProductsPage() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [activeCategory, setActiveCategory] = useState(searchParams.get("category") || "All");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
-  useEffect(() => {
+  const fetchProducts = () => {
     setLoading(true);
+    setError(false);
     Promise.all([
-      axios.get(`${API}/products`),
-      axios.get(`${API}/products/categories`),
+      axios.get(`${API}/products`, { timeout: 60000 }),
+      axios.get(`${API}/products/categories`, { timeout: 60000 }),
     ]).then(([prodRes, catRes]) => {
       setProducts(prodRes.data);
       setCategories(catRes.data);
       setLoading(false);
-    }).catch(() => setLoading(false));
-  }, []);
+    }).catch(() => {
+      setLoading(false);
+      setError(true);
+    });
+  };
+
+  useEffect(() => { fetchProducts(); }, []);
 
   useEffect(() => {
     const cat = searchParams.get("category");
@@ -216,6 +223,17 @@ export default function ProductsPage() {
             {loading ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {Array.from({ length: 6 }).map((_, i) => <ProductSkeleton key={i} />)}
+              </div>
+            ) : error ? (
+              <div className="py-20 text-center">
+                <p className="text-slate-500 text-base">Unable to load products right now.</p>
+                <p className="text-slate-400 text-sm mt-1">The server may be starting up — please try again in a moment.</p>
+                <button
+                  onClick={fetchProducts}
+                  className="mt-6 bg-[#EA580C] text-white px-6 py-3 text-sm font-bold uppercase tracking-wide hover:bg-orange-700 transition-colors"
+                >
+                  Retry
+                </button>
               </div>
             ) : filtered.length === 0 ? (
               <div className="py-20 text-center" data-testid="no-products">
