@@ -1,0 +1,12 @@
+# Netlify redirects. Rules only apply when no real file exists at the path,
+# so pre-rendered pages are never shadowed. Unknown URLs get a real 404 (404.html).
+# (Old CRA product URLs were random IDs that were never indexed — they now return 404.)
+
+/home          /          301
+/shop          /products  301
+/guides        /blog      301
+/guides/*      /blog      301
+/dealer        /dealers   301
+/faqs          /faq       301
+/about-us      /about     301
+/contact-us    /contact   301

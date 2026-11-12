@@ -464,8 +464,27 @@ def _fetch_image(url: str) -> Optional[BytesIO]:
         pass
     return None
 
+# The PDF uses FPDF's built-in Helvetica, which only supports Latin-1. Product
+# copy contains dashes/quotes outside that range (e.g. "CAT6 UTP Cable — 305mtr Box",
+# "1.5–300 sq mm"), which made /api/catalog/pdf fail with a 500.
+_PDF_CHAR_MAP = str.maketrans({
+    "—": "-", "–": "-", "‘": "'", "’": "'", "“": '"',
+    "”": '"', "…": "...", "•": "-", "₹": "Rs.", " ": " ",
+})
+
+def _pdf_safe(value):
+    if isinstance(value, str):
+        return value.translate(_PDF_CHAR_MAP).encode("latin-1", "replace").decode("latin-1")
+    if isinstance(value, list):
+        return [_pdf_safe(v) for v in value]
+    if isinstance(value, dict):
+        return {k: _pdf_safe(v) for k, v in value.items()}
+    return value
+
 def _build_catalog_pdf(products: list) -> bytes:
     from fpdf import FPDF
+
+    products = [_pdf_safe(p) for p in products]
 
     # Group products by category preserving order
     categories: dict[str, list] = {}

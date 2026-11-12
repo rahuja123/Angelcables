@@ -1,0 +1,50 @@
+{
+  "armoured-cable": {
+    "width": 904,
+    "height": 1350
+  },
+  "armoured-cable-3-core": {
+    "width": 501,
+    "height": 501
+  },
+  "armoured-cable-4-core": {
+    "width": 1000,
+    "height": 1000
+  },
+  "copper-armoured-cable": {
+    "width": 400,
+    "height": 400
+  },
+  "flexible-cable": {
+    "width": 1000,
+    "height": 1000
+  },
+  "house-wire": {
+    "width": 1000,
+    "height": 1000
+  },
+  "cctv-cable": {
+    "width": 1000,
+    "height": 1250
+  },
+  "submersible-cable": {
+    "width": 141,
+    "height": 101
+  },
+  "factory-floor": {
+    "width": 289,
+    "height": 312
+  },
+  "factory-products": {
+    "width": 289,
+    "height": 156
+  },
+  "cable-stock": {
+    "width": 141,
+    "height": 141
+  },
+  "manufacturing-facility": {
+    "width": 1000,
+    "height": 667
+  }
+}
