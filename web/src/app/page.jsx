@@ -71,9 +71,10 @@ const testimonials = [
 ];
 
 const heroImages = [
-  { name: "armoured-cable", alt: "Steel wire armoured power cable", aspect: "aspect-[4/3]" },
-  { name: "house-wire", alt: "Coils of ISI-marked copper house wire", aspect: "aspect-square" },
-  { name: "armoured-cable-3-core", alt: "3.5 core aluminium armoured cable cross-section", aspect: "aspect-square" },
+  // Mix of new branded studio shots and original product photos, alternating corners.
+  { name: "angel-armoured-4-core-copper", alt: "Angel 4 core copper armoured cable cut open showing steel wire armour", aspect: "aspect-[4/3]" },
+  { name: "armoured-cable-3-core", alt: "3 core armoured cable with steel wire armour and copper conductors", aspect: "aspect-square" },
+  { name: "angel-bare-copper-wire", alt: "Angel bare copper wire coil", aspect: "aspect-square" },
   { name: "cctv-cable", alt: "CCTV coaxial cable roll", aspect: "aspect-[4/3]" },
 ];
 

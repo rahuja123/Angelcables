@@ -36,7 +36,7 @@ IMAGE_NAMES = {
     "68e4995b1a14f21bee4f1cc3": "armoured-cable-4-core",
     "68e49a12b575d00c5aa771b6": "copper-armoured-cable",
     "68e4a0060b69274f568853d8": "flexible-cable",
-    "68e4a12956522870096e857a": "house-wire",
+    # 68e4a12956522870096e857a (red house wire) removed: AI image with a Gemini watermark
     "68e49f18993a511b693b1be0": "cctv-cable",
     "68e60002327a323aaf2eb218": "submersible-cable",
 }

@@ -11,7 +11,6 @@ const SOURCES = {
   "armoured-cable-4-core": "https://productimages.withfloats.com/actual/68e4995b1a14f21bee4f1cc3.png",
   "copper-armoured-cable": "https://productimages.withfloats.com/actual/68e49a12b575d00c5aa771b6.jpg",
   "flexible-cable": "https://productimages.withfloats.com/actual/68e4a0060b69274f568853d8.jpg",
-  "house-wire": "https://productimages.withfloats.com/actual/68e4a12956522870096e857a.png",
   "cctv-cable": "https://productimages.withfloats.com/actual/68e49f18993a511b693b1be0.png",
   "submersible-cable": "https://fpimages.withfloats.com/actual/68e60002327a323aaf2eb218.png",
   "factory-floor": "https://fpimages.withfloats.com/actual/68b915ab3266bc661dcc5cf9.jpg",
